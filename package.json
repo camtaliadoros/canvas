@@ -15,12 +15,15 @@
   "dependencies": {
     "gatsby": "^5.13.1",
     "gatsby-cli": "^5.13.1",
+    "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-image": "^3.13.0",
+    "gatsby-plugin-sass": "^6.13.0",
     "gatsby-plugin-sharp": "^5.13.0",
     "gatsby-source-filesystem": "^5.13.0",
     "gatsby-transformer-sharp": "^5.13.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "sass": "^1.69.7"
   },
   "repository": {
     "type": "git",
