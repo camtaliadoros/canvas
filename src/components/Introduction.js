@@ -1,11 +1,12 @@
 import React from 'react';
+import * as styles from '../styles/introduction.module.css';
 
 export const Introduction = () => {
   return (
-    <section id='introduction'>
+    <section className={styles.container} id='introduction'>
       <h1>INTRODUCTION</h1>
       <h2>A Space to Change</h2>
-      <p>
+      <p className='centered-text-container'>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea

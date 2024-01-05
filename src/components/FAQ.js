@@ -1,7 +1,7 @@
 import React from 'react';
-import { FAQDropdown } from './FAQDropdown';
+import { FaqDropdown } from './FaqDropdown';
 
-export const FAQ = () => {
+export const Faq = () => {
   const faqContent = [
     {
       question: `I'd like to do something in the philanthropy space, but I don't know where to begin - how do you help?`,
@@ -30,7 +30,7 @@ export const FAQ = () => {
       <h1>FAQ</h1>
       <h2>A Space to Learn</h2>
       {faqContent.map((content) => (
-        <FAQDropdown content={content} />
+        <FaqDropdown content={content} />
       ))}
     </section>
   );

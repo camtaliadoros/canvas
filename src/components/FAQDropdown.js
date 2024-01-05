@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const FAQDropdown = ({ content }) => {
+export const FaqDropdown = ({ content }) => {
   const { question, answer } = content;
 
   return (

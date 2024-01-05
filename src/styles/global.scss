@@ -3,17 +3,123 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
 }
 
 main {
-  background-color: $medium-grey;
+  background-color: $dark-grey;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: $xl-space;
 }
 
 section {
   width: 60%;
+}
+
+header {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  padding: $xl-space;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: $xl-space;
+  top: 50vh;
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+}
+
+// Typography
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  color: $white;
+
+  &.dark {
+    color: $black;
+  }
+}
+
+h1 {
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 3.9px;
+  margin-bottom: $small-space;
+  //   Add font family
+}
+
+h2 {
+  // font family
+  font-size: 90px;
+  line-height: 100px;
+  margin-bottom: $large-space;
+}
+
+h3 {
+  // font family
+  font-size: 30px;
+  line-height: 39px;
+  color: $dark-stone;
+}
+
+h4 {
+  // font-family
+  font-size: 21px;
+  line-height: 29px;
+}
+
+h5 {
+  // font-family: ivy ora
+  font-size: 30px;
+  line-height: 39px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 24px;
+
+  &.large {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  &.bold {
+    // font-family
+  }
+
+  &.copyright {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+a {
+  &.email {
+    // font family
+    font-size: 30px;
+    line-height: 39px;
+    text-decoration: underline;
+    color: $white;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.centered-text-container {
+  max-width: 600px;
+  margin: 0 auto;
 }
