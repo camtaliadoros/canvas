@@ -7,13 +7,9 @@ export const Introduction = () => {
       <h1>INTRODUCTION</h1>
       <h2>A Space to Change</h2>
       <p className='centered-text-container'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
+        We support inspirational people instigate meaningful and powerful change
+        in the world. Established in 2015, we shape, launch and grow
+        philanthropic and corporate socially responsible initiatives.
       </p>
     </section>
   );
