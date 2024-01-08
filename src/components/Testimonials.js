@@ -1,5 +1,6 @@
 import React from 'react';
 import { TestimonialCard } from './TestimonialCard';
+import * as styles from '../styles/testimonials.module.css';
 
 export const Testimonials = () => {
   const testimonialContents = [
@@ -26,9 +27,9 @@ export const Testimonials = () => {
     },
   ];
   return (
-    <section id='testimonials'>
-      {testimonialContents.map((content) => (
-        <TestimonialCard content={content} />
+    <section className={styles.container} id='testimonials'>
+      {testimonialContents.map((content, i) => (
+        <TestimonialCard content={content} key={i} />
       ))}
     </section>
   );

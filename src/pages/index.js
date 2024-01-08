@@ -8,7 +8,7 @@ import { Contact } from '../components/Contact';
 import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
 import { Nav } from '../components/Nav';
-import '../styles/global.scss';
+import '../styles/global.css';
 import { Introduction } from '../components/Introduction';
 
 export default function Home() {

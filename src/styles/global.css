@@ -1,4 +1,22 @@
-@import 'variables';
+:root {
+  /* Colours */
+  --light-stone: #e3e1dd;
+  --medium-stone: #c2bcbc;
+  --dark-stone: #514d49;
+  --dark-grey: #939193;
+  --white: #fff;
+  --black: #252324;
+  --chalk: #f3f1ea;
+  --green: #b6fde3;
+  --dark-green: #2e3733;
+
+  /* Spacing */
+  --xs-space: 6px;
+  --small-space: 12px;
+  --medium-space: 24px;
+  --large-space: 36px;
+  --xl-space: 48px;
+}
 
 * {
   box-sizing: border-box;
@@ -6,24 +24,24 @@
 }
 
 main {
-  background-color: $dark-grey;
+  background-color: var(--dark-grey);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: $xl-space;
+  padding: var(--xl-space);
 }
 
 section {
   width: 60%;
-  margin-bottom: $xl-space;
+  margin-bottom: var(--xl-space);
 }
 
 header {
   display: flex;
   position: fixed;
   justify-content: space-between;
-  padding: $xl-space;
+  padding: var(--xl-space);
   width: 100%;
 }
 
@@ -31,7 +49,7 @@ nav {
   display: flex;
   flex-direction: column;
   position: fixed;
-  right: $xl-space;
+  right: var(--xl-space);
   top: 50vh;
 
   ul {
@@ -40,17 +58,17 @@ nav {
   }
 }
 
-// Typography
+/* Typography */
 h1,
 h2,
 h3,
 h4,
 h5,
 p {
-  color: $white;
+  color: var(--white);
 
   &.dark {
-    color: $black;
+    color: var(--black);
   }
 }
 
@@ -58,32 +76,32 @@ h1 {
   font-size: 13px;
   line-height: 24px;
   letter-spacing: 3.9px;
-  margin-bottom: $small-space;
-  //   Add font family
+  margin-bottom: var(--small-space);
+  /* Add font family */
 }
 
 h2 {
-  // font family
+  /* font family */
   font-size: 90px;
   line-height: 100px;
-  margin-bottom: $large-space;
+  margin-bottom: var(--large-space);
 }
 
 h3 {
-  // font family
+  /* font family */
   font-size: 30px;
   line-height: 39px;
-  color: $dark-stone;
+  color: var(--dark-stone);
 }
 
 h4 {
-  // font-family
+  /* font-family */
   font-size: 21px;
   line-height: 29px;
 }
 
 h5 {
-  // font-family: ivy ora
+  /* font-family: ivy ora */
   font-size: 30px;
   line-height: 39px;
 }
@@ -98,7 +116,7 @@ p {
   }
 
   &.bold {
-    // font-family
+    /* font-family */
   }
 
   &.copyright {
@@ -108,11 +126,11 @@ p {
 
 a {
   &.email {
-    // font family
+    /* font family */
     font-size: 30px;
     line-height: 39px;
     text-decoration: underline;
-    color: $white;
+    color: var(--white);
 
     &:hover {
       text-decoration: none;
