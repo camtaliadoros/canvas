@@ -27,12 +27,11 @@
 
 .cardContainer {
   max-width: 360px;
-  padding: var(--medium-space);
+  padding: var(--large-space);
   border-radius: 14px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: var(--large-space);
 
   & > p {
     text-align: left;

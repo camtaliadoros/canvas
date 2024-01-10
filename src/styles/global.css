@@ -16,6 +16,10 @@
   --medium-space: 24px;
   --large-space: 36px;
   --xl-space: 48px;
+
+  /* Content Space */
+  --narrow: 450px;
+  --wide: 900px;
 }
 
 * {
@@ -69,14 +73,10 @@ h4,
 h5,
 p {
   color: var(--white);
-
-  &.dark {
-    color: var(--black);
-  }
 }
 
 h1 {
-  font-size: 11px;
+  font-size: 10px;
   line-height: 24px;
   letter-spacing: 0.3em;
   /* margin-bottom: var(--xs-space); */
@@ -87,9 +87,9 @@ h1 {
 h2 {
   font-family: 'ivyora-display';
   font-weight: 300;
-  font-size: 72px;
+  font-size: 66px;
   line-height: 100px;
-  margin-bottom: var(--medium-space);
+  margin-bottom: var(--large-space);
 }
 
 h3 {
@@ -102,10 +102,10 @@ h3 {
 h4 {
   font-family: 'ivyora-display';
   font-weight: 300;
-  font-size: 21px;
-  line-height: 29px;
-  max-width: 460px;
-  margin-bottom: var(--small-space);
+  font-size: 16px;
+  line-height: 1.4em;
+  max-width: var(--narrow);
+  margin-bottom: var(--medium-space);
 }
 
 h5 {
@@ -116,9 +116,9 @@ h5 {
 
 p {
   font-family: 'ABC Normal Book';
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.5em;
-  max-width: 460px;
+  max-width: var(--narrow);
   margin-bottom: var(--xs-space);
 
   &.large {
@@ -150,6 +150,20 @@ a {
 }
 
 .centered-text-container {
-  max-width: 460px;
+  max-width: var(--narrow);
   margin: 0 auto;
+}
+
+.white-container-section {
+  background-color: var(--white);
+
+  & > h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    color: var(--black);
+    margin-bottom: var(--medium-space);
+  }
 }
