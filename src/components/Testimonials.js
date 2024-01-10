@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { TestimonialCard } from './TestimonialCard';
 import * as styles from '../styles/testimonials.module.css';
 
@@ -77,9 +77,19 @@ export const Testimonials = () => {
       company: 'The Finishing School Foundation',
     },
   ];
+
+  const featuredTestimonials = [];
+
+  for (let n = 0; n < 3; n++) {
+    const i = Math.floor(Math.random() * testimonialContents.length);
+
+    featuredTestimonials.push(testimonialContents[i]);
+    testimonialContents.splice(i, 1);
+  }
+
   return (
     <section className={styles.container} id='testimonials'>
-      {testimonialContents.map((content, i) => (
+      {featuredTestimonials.map((content, i) => (
         <TestimonialCard content={content} key={i} />
       ))}
     </section>
