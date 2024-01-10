@@ -51,14 +51,34 @@ header {
   justify-content: space-between;
   padding: 84px;
   width: 100%;
+}
 
+.contact-link-container {
   & > a {
     font-family: 'ABC Normal Book';
     color: var(--white);
     font-size: 14px;
     text-decoration: none;
-    border-bottom: solid 1px var(--white);
+    width: 100%;
+    display: flex;
   }
+}
+
+.contact-link-container::after {
+  content: '';
+  position: absolute;
+  top: 104px;
+  width: 70px;
+  height: 1px;
+  background-color: var(--white);
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-out;
+}
+
+.contact-link-container:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 nav {

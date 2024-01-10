@@ -11,7 +11,9 @@ export const Header = () => {
         loading='eager'
         width={60}
       />
-      <a href='mailto:info@canvasphilanthropy.com'>Contact us</a>
+      <div className='contact-link-container'>
+        <a href='mailto:info@canvasphilanthropy.com'>Contact us</a>
+      </div>
     </header>
   );
 };
