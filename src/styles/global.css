@@ -33,8 +33,11 @@ main {
 }
 
 section {
-  width: 60%;
+  width: 66%;
   margin-bottom: var(--xl-space);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header {
@@ -73,19 +76,20 @@ p {
 }
 
 h1 {
-  font-size: 13px;
+  font-size: 11px;
   line-height: 24px;
-  letter-spacing: 3.9px;
-  margin-bottom: var(--small-space);
+  letter-spacing: 0.3em;
+  /* margin-bottom: var(--xs-space); */
   text-transform: uppercase;
-  /* Add font family */
+  font-family: 'ABC Normal Book';
 }
 
 h2 {
-  /* font family */
-  font-size: 90px;
+  font-family: 'ivyora-display';
+  font-weight: 300;
+  font-size: 72px;
   line-height: 100px;
-  margin-bottom: var(--large-space);
+  margin-bottom: var(--medium-space);
 }
 
 h3 {
@@ -96,9 +100,12 @@ h3 {
 }
 
 h4 {
-  /* font-family */
+  font-family: 'ivyora-display';
+  font-weight: 300;
   font-size: 21px;
   line-height: 29px;
+  max-width: 460px;
+  margin-bottom: var(--small-space);
 }
 
 h5 {
@@ -108,8 +115,10 @@ h5 {
 }
 
 p {
-  font-size: 16px;
+  font-family: 'ABC Normal Book';
+  font-size: 14px;
   line-height: 24px;
+  max-width: 460px;
 
   &.large {
     font-size: 20px;
@@ -140,6 +149,6 @@ a {
 }
 
 .centered-text-container {
-  max-width: 640px;
+  max-width: 460px;
   margin: 0 auto;
 }
