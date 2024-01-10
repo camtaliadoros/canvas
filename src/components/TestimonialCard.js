@@ -8,9 +8,10 @@ export const TestimonialCard = ({ content }) => {
     <div className={styles.cardContainer}>
       <div className={styles.circle} />
       <p>Logo</p>
-      <p>{blurb}</p>
-      <p>{title}</p>
-      <p>{company}</p>
+      <p className={styles.blurb}>{blurb}</p>
+
+      <p className={styles.title}>{title}</p>
+      <p className={styles.title}>{company}</p>
     </div>
   );
 };
