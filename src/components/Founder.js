@@ -1,9 +1,17 @@
+import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 
 export const Founder = () => {
   return (
     <section className='white-container-section' id='founder'>
-      <p>Image</p>
+      <StaticImage
+        src='../assets/alex.png'
+        loading='lazy'
+        placeholder='blurred'
+        alt='canvas founder Alex Taliadoros'
+        width={120}
+        className='founder-img'
+      />
       <h1>FOUNDER</h1>
       <h2>Meet Alex</h2>
       <p>
@@ -24,7 +32,13 @@ export const Founder = () => {
         almost every cause and issue across the globe, it's a privilege to be
         able to support those who are able, make a difference to those in need”
       </p>
-      <p>Signature</p>
+      <StaticImage
+        src='../assets/alex-signature.png'
+        alt='alex signature'
+        loading='lazy'
+        placeholder='blurred'
+        width={90}
+      />
       <div className='signature-container'>
         <p>Alexandra Taliadoros</p>
         <p>Founder - Canvas Philanthropy</p>

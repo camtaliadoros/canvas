@@ -216,6 +216,7 @@ a {
 }
 
 .signature-container {
+  margin-top: var(--medium-space);
   & > p {
     margin-bottom: 0;
     line-height: 1.2;
@@ -229,14 +230,15 @@ a {
   justify-content: center;
   margin-bottom: 0;
   padding: 72px 0;
-  background-color: var(--dark-grey);
+  background-color: var(--black);
   width: 100%;
+  background-image: url('../assets/contact-bg.png');
 }
 
 footer {
-  background-color: var(--black);
+  background-color: #000;
   display: flex;
-  padding: var(--large-space);
+  padding: var(--large-space) 84px;
   justify-content: space-between;
 
   & > p {
@@ -244,4 +246,37 @@ footer {
     color: rgba(255, 255, 255, 0.5);
     font-size: 9px;
   }
+}
+
+.footer-logo {
+  opacity: 0.5;
+}
+
+.founder-img {
+  margin-bottom: var(--medium-space);
+}
+
+.expertise-cards-container {
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr;
+  gap: var(--xl-space);
+}
+
+.expertise-card {
+  background-color: var(--light-stone);
+  border-radius: 3px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: var(--large-space);
+
+  & > p {
+    color: var(--black);
+    text-align: left;
+  }
+
+  & h3
+}
+
+.expertise-index {
+  border-bottom: 1px solid var(--black);
 }
