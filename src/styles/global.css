@@ -15,7 +15,7 @@
   --small-space: 12px;
   --medium-space: 24px;
   --large-space: 36px;
-  --xl-space: 48px;
+  --xl-space: 42px;
 
   /* Content Space */
   --narrow: 450px;
@@ -79,7 +79,6 @@ h1 {
   font-size: 10px;
   line-height: 24px;
   letter-spacing: 0.3em;
-  /* margin-bottom: var(--xs-space); */
   text-transform: uppercase;
   font-family: 'ABC Normal Book';
 }
@@ -88,8 +87,7 @@ h2 {
   font-family: 'ivyora-display';
   font-weight: 300;
   font-size: 66px;
-  line-height: 100px;
-  margin-bottom: var(--large-space);
+  margin-bottom: var(--medium-space);
 }
 
 h3 {
@@ -122,8 +120,9 @@ p {
   margin-bottom: var(--xs-space);
 
   &.large {
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 15px;
+    line-height: 1.5em;
+    max-width: 480px;
   }
 
   &.bold {
@@ -157,6 +156,14 @@ a {
 .white-container-section {
   background-color: var(--white);
 
+  & > h2 {
+    margin-bottom: var(--xl-space);
+  }
+
+  & > p {
+    margin-bottom: var(--medium-space);
+  }
+
   & > h1,
   h2,
   h3,
@@ -164,6 +171,5 @@ a {
   h5,
   p {
     color: var(--black);
-    margin-bottom: var(--medium-space);
   }
 }
