@@ -9,9 +9,12 @@ export const ExpertiseCard = ({ content, index }) => {
 
   return (
     <div className='expertise-card'>
-      <p className='expertise-index'>{cardNumber}</p>
+      <div>
+        <p className='expertise-index'>{cardNumber}</p>
+      </div>
+
       <h3>{title}</h3>
-      <StaticImage src='../assets/icons/csr-icon.png' alt='csr' />
+      <StaticImage src='../assets/icons/csr-icon.png' alt='csr' width={78} />
       <p>{description}</p>
     </div>
   );

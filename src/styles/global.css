@@ -120,10 +120,15 @@ h2 {
 }
 
 h3 {
-  /* font family */
-  font-size: 30px;
-  line-height: 39px;
+  font-family: ivyora-text, sans-serif;
+  font-weight: 300;
+  text-align: left;
+  font-size: 22px;
+  line-height: 28px;
   color: var(--dark-stone);
+  white-space: pre-wrap;
+  position: relative;
+  top: -6px;
 }
 
 h4 {
@@ -260,21 +265,24 @@ footer {
   display: grid;
   grid-template: 1fr 1fr 1fr / 1fr 1fr;
   gap: var(--xl-space);
+  margin-top: var(--xl-space);
 }
 
 .expertise-card {
   background-color: var(--light-stone);
   border-radius: 3px;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template: 1fr 2fr / 1fr 2fr;
   padding: var(--large-space);
+  align-items: start;
+  justify-items: start;
+  height: 380px;
 
-  & > p {
+  & p {
     color: var(--black);
     text-align: left;
+    display: inline-block;
   }
-
-  & h3
 }
 
 .expertise-index {

@@ -4,12 +4,12 @@ import { ExpertiseCard } from './ExpertiseCard';
 export const Expertise = () => {
   const cardsContent = [
     {
-      title: 'Charity Establishment',
+      title: 'Charity\nEstablishment',
       description: `We help individuals, families and companies of all shapes and sizes, to create the charity, foundation or trust right for them. We don't mind which cause inspires you, we just ask it makes our collective world a better place. We are with you from the start to the end of the journey and will assist you with all aspects in between, from HMRC registration; best practice procedures, Gift Aid reclaim and everything in between - we have you covered. `,
       iconPath: '../assets/icons/charity-establishment.png',
     },
     {
-      title: 'Due Diligence, Compliance and Governance',
+      title: 'Due Diligence, Compliance\nand Governance',
       description: `Trust and transparency are increasingly the cornerstone values of every aspect of the charity sector. We work with you to ensure your organisation is aligned to best practice in all aspects of your work. With notable focus on due diligence; compliance; fraud and risk management; conflict of interest and reporting. We work to ensure steps and requirements are understood and implemented in a simple manner which works for the organisation.`,
       iconPath: '../assets/icons/philanthropy-icon.png',
     },
@@ -24,12 +24,12 @@ export const Expertise = () => {
       iconPath: '../assets/icons/csr-icon.png',
     },
     {
-      title: 'CSR, Social Impact and ESG Consultancy',
+      title: 'CSR, Social Impact\nand ESG Consultancy',
       description: `No matter the size and scope of your project, we will help you realise your philanthropic motivations whilst engaging and harnessing your team's collective talent and passion to ensure your company's values are furthered; UN development goals are met and our world is a better place as a result.`,
       iconPath: '../assets/icons/csr-icon.png',
     },
     {
-      title: 'Fundraising Management',
+      title: 'Fundraising\nManagement',
       description: `From warbird air shows with Buzz Aldrin, to black tie dinner galas - from pop up food surplus restaurants in collaboration with Time Out and the Mayor of London to raise awareness for Food Poverty, to a dinner dance aboard HMS Belfast for the Normandy Veterans; From gigs with Rudimental at Village Underground to micro-finance programme launches at The Ned.`,
       iconPath: '../assets/icons/fundraising-icon.png',
     },
