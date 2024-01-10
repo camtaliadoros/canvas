@@ -49,8 +49,16 @@ header {
   display: flex;
   position: fixed;
   justify-content: space-between;
-  padding: var(--xl-space);
+  padding: 84px;
   width: 100%;
+
+  & > a {
+    font-family: 'ABC Normal Book';
+    color: var(--white);
+    font-size: 14px;
+    text-decoration: none;
+    border-bottom: solid 1px var(--white);
+  }
 }
 
 nav {

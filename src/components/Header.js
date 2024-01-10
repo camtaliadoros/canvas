@@ -1,10 +1,17 @@
+import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 
 export const Header = () => {
   return (
     <header>
-      <p>Canvas</p>
-      <a href='mailto:info@canvasphilanthropy.com'>Contact Us</a>
+      <StaticImage
+        src='../assets/canvas-logo.png'
+        alt='canvas-logo'
+        placeholder='blurred'
+        loading='eager'
+        width={60}
+      />
+      <a href='mailto:info@canvasphilanthropy.com'>Contact us</a>
     </header>
   );
 };
