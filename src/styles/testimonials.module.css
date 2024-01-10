@@ -1,6 +1,7 @@
 .container {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
   margin: 0;
   gap: var(--xl-space);
 
@@ -25,4 +26,19 @@
   max-width: 360px;
   padding: var(--medium-space);
   border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--large-space);
+
+  & > p {
+    text-align: left;
+  }
+}
+
+.circle {
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 50%;
+  background-color: var(--dark-grey);
 }
