@@ -13,6 +13,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-anchor-links`,
+    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-omni-font-loader`,
       options: {

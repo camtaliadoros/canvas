@@ -1,15 +1,15 @@
 import * as React from 'react';
-import { Testimonial, Testimonials } from '../components/Testimonials';
 import { About } from '../components/About';
-import { Expertise } from '../components/Expertise';
-import { Founder } from '../components/Founder';
-import { Faq } from '../components/Faq';
 import { Contact } from '../components/Contact';
+import { Expertise } from '../components/Expertise';
+import { Faq } from '../components/Faq';
 import { Footer } from '../components/Footer';
+import { Founder } from '../components/Founder';
 import { Header } from '../components/Header';
-import { Nav } from '../components/Nav';
-import '../styles/global.css';
 import { Introduction } from '../components/Introduction';
+import { Nav } from '../components/Nav';
+import { Testimonials } from '../components/Testimonials';
+import '../styles/global.css';
 
 export default function Home() {
   return (
