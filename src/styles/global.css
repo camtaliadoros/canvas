@@ -18,7 +18,7 @@
   --xl-space: 42px;
 
   /* Content Space */
-  --narrow: 450px;
+  --narrow: 430px;
   --medium: 480px;
   --wide: 900px;
 }
@@ -163,6 +163,7 @@ a {
 
 .white-container-section {
   background-color: var(--white);
+  padding: 120px 0;
 
   & > h2 {
     margin-bottom: var(--xl-space);
@@ -180,5 +181,12 @@ a {
   h5,
   p {
     color: var(--black);
+  }
+}
+
+.signature-container {
+  & > p {
+    margin-bottom: 0;
+    line-height: 1.2;
   }
 }

@@ -2,34 +2,30 @@ import React from 'react';
 
 export const Founder = () => {
   return (
-    <section id='founder'>
+    <section className='white-container-section' id='founder'>
       <p>Image</p>
       <h1>FOUNDER</h1>
       <h2>Meet Alex</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ultrices neque
-        ornare aenean euismod. Ac turpis egestas sed tempus. Dignissim convallis
-        aenean et tortor. Gravida in fermentum et sollicitudin ac orci phasellus
-        egestas. Commodo nulla facilisi nullam vehicula ipsum a arcu. Eleifend
-        donec pretium vulputate sapien nec. Sed arcu non odio euismod. Urna et
-        pharetra pharetra massa massa ultricies mi quis. At volutpat diam ut
-        venenatis. Interdum varius sit amet mattis vulputate enim nulla aliquet
-        porttitor. Lectus magna fringilla urna porttitor rhoncus dolor purus.
-        Feugiat nisl pretium fusce id velit ut tortor pretium. Orci phasellus
-        egestas tellus rutrum tellus pellentesque. Nec nam aliquam sem et
-        tortor. A iaculis at erat pellentesque adipiscing. Pellentesque sit amet
-        porttitor eget dolor. Scelerisque varius morbi enim nunc faucibus. Lorem
-        sed risus ultricies tristique nulla aliquet enim tortor. Sed turpis
-        tincidunt id aliquet risus feugiat in ante metus. Risus sed vulputate
-        odio ut enim blandit volutpat maecenas. Sed tempus urna et pharetra
-        pharetra massa. Quis commodo odio aenean sed. Pharetra pharetra massa
-        massa ultricies mi quis hendrerit dolor magna. Congue eu consequat ac
-        felis donec. Sit amet purus gravida quis blandit turpis. Fringilla
-        phasellus faucibus scelerisque eleifend. Nulla pharetra diam sit amet.
+        Alex has extensive experience in leadership across the philanthropic
+        sector, with an expertise and passion for philanthropic and social
+        impact strategy and charitable establishment and direction.
+      </p>
+      <p>
+        Alex's career spans across the UK, Uganda, Burma, Armenia, New York and
+        South Africa - but London is home, where she lives with her family and
+        Frenchie - balancing the privilege of directing Canvas with the absolute
+        joy of being a Mum to her son.
+      </p>
+      <p>
+        “It's been my honour to support philanthropists of diverse backgrounds
+        and passions, realise the impact and change they wish to see in an ever
+        changing world. As we see the landscape of need increase regarding
+        almost every cause and issue across the globe, it's a privilege to be
+        able to support those who are able, make a difference to those in need”
       </p>
       <p>Signature</p>
-      <div>
+      <div className='signature-container'>
         <p>Alexandra Taliadoros</p>
         <p>Founder - Canvas Philanthropy</p>
       </div>
