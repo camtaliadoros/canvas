@@ -23,8 +23,8 @@ export default function Home() {
         <Expertise />
         <Founder />
         <Faq />
-        <Contact />
       </main>
+      <Contact />
       <Footer />
     </>
   );

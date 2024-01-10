@@ -18,7 +18,7 @@
   --xl-space: 42px;
 
   /* Content Space */
-  --narrow: 430px;
+  --narrow: 440px;
   --medium: 480px;
   --wide: 900px;
 }
@@ -85,7 +85,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'ivyora-display';
+  font-family: ivyora-display, sans-serif;
   font-weight: 300;
   font-size: 66px;
   margin-bottom: var(--medium-space);
@@ -99,8 +99,8 @@ h3 {
 }
 
 h4 {
-  font-family: 'ivyora-display';
-  font-weight: 300;
+  font-family: ivyora-display, sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.4em;
   max-width: var(--narrow);
@@ -108,9 +108,10 @@ h4 {
 }
 
 h5 {
-  /* font-family: ivy ora */
-  font-size: 30px;
-  line-height: 39px;
+  font-family: ivyora-text, sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.5;
 }
 
 p {
@@ -144,9 +145,11 @@ p {
 
 a {
   &.email {
-    /* font family */
-    font-size: 30px;
-    line-height: 39px;
+    font-family: ivyora-text, sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.5em;
     text-decoration: underline;
     color: var(--white);
 
@@ -189,4 +192,15 @@ a {
     margin-bottom: 0;
     line-height: 1.2;
   }
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  padding: 72px 0;
+  background-color: var(--dark-grey);
+  width: 100%;
 }
