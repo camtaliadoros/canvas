@@ -4,9 +4,15 @@ export const FaqDropdown = ({ content }) => {
   const { question, answer } = content;
 
   return (
-    <div>
-      <p>{question}</p>
-      <p>{answer}</p>
+    <div className='faq-container'>
+      <div className='faq-question-container'>
+        <p className='large'>{question}</p>
+      </div>
+      <div className='faq-answer-container'>
+        {answer.map((paragraph) => (
+          <p>{paragraph}</p>
+        ))}
+      </div>
     </div>
   );
 };

@@ -288,3 +288,23 @@ footer {
 .expertise-index {
   border-bottom: 1px solid var(--black);
 }
+
+.faq-container {
+  width: 100%;
+}
+
+.faq-answer-container {
+  display: none;
+}
+
+.faq-question-container {
+  display: flex;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
+  padding: var(--small-space) 0;
+
+  & > p {
+    max-width: 100%;
+    text-align: left;
+    margin-bottom: 0;
+  }
+}
