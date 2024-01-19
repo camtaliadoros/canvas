@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaqDropdown } from './FaqDropdown';
 
-const Faq = () => {
+export const Faq = () => {
   const faqContent = [
     {
       question: `I'd like to do something in the philanthropy space, but I don't know where to begin - how do you help?`,
@@ -50,5 +50,3 @@ const Faq = () => {
     </section>
   );
 };
-
-export default Faq;

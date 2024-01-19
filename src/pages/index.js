@@ -4,12 +4,12 @@ import { Contact } from '../components/Contact';
 import { Expertise } from '../components/Expertise';
 import { Footer } from '../components/Footer';
 import { Founder } from '../components/Founder';
+import { Faq } from '../components/Faq';
 import { Header } from '../components/Header';
 import { Introduction } from '../components/Introduction';
 import { Nav } from '../components/Nav';
 import { Testimonials } from '../components/Testimonials';
 import '../styles/global.css';
-import Faq from '../components/Faq';
 
 export default function Home() {
   return (
