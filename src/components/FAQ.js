@@ -44,8 +44,8 @@ export const Faq = () => {
     <section id='faq'>
       <h1>FAQ</h1>
       <h2>A Space to Learn</h2>
-      {faqContent.map((content) => (
-        <FaqDropdown content={content} />
+      {faqContent.map((content, answerIndex) => (
+        <FaqDropdown content={content} key={answerIndex} />
       ))}
     </section>
   );

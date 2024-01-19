@@ -18,9 +18,7 @@
   border-left: none;
   width: 100%;
 
-  & > p.large {
-    max-width: none;
-    text-align: left;
+  :global .large {
     margin-bottom: 0;
   }
 }
