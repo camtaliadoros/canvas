@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
-import { TestimonialCard } from './TestimonialCard';
+import React from 'react';
 import * as styles from '../styles/testimonials.module.css';
+import { TestimonialCard } from './TestimonialCard';
 
 export const Testimonials = () => {
   const testimonialContents = [

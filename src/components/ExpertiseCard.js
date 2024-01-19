@@ -1,4 +1,4 @@
-import { GatsbyImage, StaticImage, getImage } from 'gatsby-plugin-image';
+import { StaticImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
 
 export const ExpertiseCard = ({ content, index }) => {
