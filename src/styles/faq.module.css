@@ -3,7 +3,29 @@
 }
 
 .answerContainer {
-  display: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  text-align: left;
+  transition: max-height 1s;
+  max-height: 0;
+  overflow: hidden;
+
+  &.openAnswer {
+    display: block;
+    max-height: 300px;
+    transition: max-height 1s;
+  }
+
+  & p {
+    padding: 0 var(--medium-space);
+
+    &:first-of-type {
+      padding-top: var(--medium-space);
+    }
+
+    &:last-of-type {
+      padding-bottom: var(--medium-space);
+    }
+  }
 }
 
 .questionContainer {
@@ -29,10 +51,10 @@
   height: 12px;
   width: 12px;
   transform: rotate(-45deg);
-  transition: transform 2s;
+  transition: transform 1s;
 
   &.openChevron {
     transform: rotate(135deg);
-    transition: transform 2s;
+    transition: transform 1s;
   }
 }
