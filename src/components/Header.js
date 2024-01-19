@@ -1,10 +1,11 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
+import * as styles from '../styles/header.module.css';
 
 export const Header = () => {
   return (
     <>
-      <header>
+      <div className={styles.header}>
         <StaticImage
           src='../assets/canvas-logo.png'
           alt='canvas-logo'
@@ -12,8 +13,8 @@ export const Header = () => {
           loading='eager'
           width={60}
         />
-      </header>
-      <div className='contact-link-container'>
+      </div>
+      <div className={styles.contactLinkContainer}>
         <a href='mailto:info@canvasphilanthropy.com'>Contact us</a>
       </div>
     </>

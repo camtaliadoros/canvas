@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  position: fixed;
+  top: 90px;
+  left: 90px;
+}
+
+.contactLinkContainer {
+  display: flex;
+  position: fixed;
+  top: 90px;
+  right: 90px;
+
+  & > a {
+    font-family: 'ABC Normal Book';
+    color: var(--white);
+    font-size: 14px;
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+  }
+}
+
+.contactLinkContainer::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 70px;
+  height: 1px;
+  background-color: var(--white);
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-out;
+}
+
+.contactLinkContainer:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
