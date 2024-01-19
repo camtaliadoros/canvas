@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaqDropdown } from './FaqDropdown';
+import { FaqsDropdown } from './FaqsDropdown';
 
 export const Faqs = () => {
   const faqContent = [
@@ -45,7 +45,7 @@ export const Faqs = () => {
       <h1>FAQ</h1>
       <h2>A Space to Learn</h2>
       {faqContent.map((content, answerIndex) => (
-        <FaqDropdown content={content} key={answerIndex} />
+        <FaqsDropdown content={content} key={answerIndex} />
       ))}
     </section>
   );

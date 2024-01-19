@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import * as styles from '../styles/faq.module.css';
 
-export const FaqDropdown = ({ content }) => {
+export const FaqsDropdown = ({ content }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const { question, answer } = content;
