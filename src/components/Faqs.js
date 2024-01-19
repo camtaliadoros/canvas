@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaqDropdown } from './FaqDropdown';
 
-export const Faq = () => {
+export const Faqs = () => {
   const faqContent = [
     {
       question: `I'd like to do something in the philanthropy space, but I don't know where to begin - how do you help?`,

@@ -153,10 +153,6 @@ p {
     margin-bottom: var(--medium-space);
   }
 
-  &.bold {
-    /* font-family */
-  }
-
   &.copyright {
     color: rgba(255, 255, 255, 0.5);
   }

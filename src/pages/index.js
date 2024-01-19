@@ -4,7 +4,7 @@ import { Contact } from '../components/Contact';
 import { Expertise } from '../components/Expertise';
 import { Footer } from '../components/Footer';
 import { Founder } from '../components/Founder';
-import { Faq } from '../components/Faq';
+import { Faqs } from '../components/Faqs';
 import { Header } from '../components/Header';
 import { Introduction } from '../components/Introduction';
 import { Nav } from '../components/Nav';
@@ -22,7 +22,7 @@ export default function Home() {
         <About />
         <Expertise />
         <Founder />
-        <Faq />
+        <Faqs />
       </main>
       <Contact />
       <Footer />
