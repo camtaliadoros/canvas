@@ -12,16 +12,17 @@ export const FaqDropdown = ({ content }) => {
 
   return (
     <div className={styles.container}>
-      <button className={styles.questionContainer} onClick={handleClick}>
+      <div className={styles.questionContainer} onClick={handleClick}>
         <p className='large'>{question}</p>
         <div
           className={`${styles.chevron} ${isOpen ? styles.openChevron : null}`}
         ></div>
-      </button>
+      </div>
       <div
         className={`${styles.answerContainer} ${
           isOpen ? styles.openAnswer : null
         }`}
+        onClick={handleClick}
       >
         {answer.map((paragraph) => (
           <p>{paragraph}</p>
