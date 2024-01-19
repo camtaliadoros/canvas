@@ -18,16 +18,15 @@ export const FaqDropdown = ({ content }) => {
           className={`${styles.chevron} ${isOpen ? styles.openChevron : null}`}
         ></div>
       </button>
-      <button
+      <div
         className={`${styles.answerContainer} ${
           isOpen ? styles.openAnswer : null
         }`}
-        onClick={handleClick}
       >
         {answer.map((paragraph) => (
           <p>{paragraph}</p>
         ))}
-      </button>
+      </div>
     </div>
   );
 };

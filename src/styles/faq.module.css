@@ -5,7 +5,7 @@
 .answerContainer {
   background-color: rgba(255, 255, 255, 0.1);
   text-align: left;
-  transition: max-height 1s;
+  transition: max-height 0.5s;
   max-height: 0;
   overflow: hidden;
   border: none;
@@ -15,7 +15,6 @@
   &.openAnswer {
     display: block;
     max-height: 300px;
-    transition: max-height 1s;
   }
 
   & p {
@@ -55,10 +54,9 @@
   height: 12px;
   width: 12px;
   transform: rotate(-45deg);
-  transition: transform 1s;
+  transition: transform 0.5s;
 
   &.openChevron {
     transform: rotate(135deg);
-    transition: transform 1s;
   }
 }

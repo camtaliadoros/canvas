@@ -56,7 +56,7 @@ header {
   display: flex;
   position: fixed;
   justify-content: space-between;
-  padding: 84px;
+  padding: 84px 84px 0 84px;
   width: 100%;
 }
 
