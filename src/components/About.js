@@ -1,6 +1,27 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import { ClientLogos } from './ClientLogos';
 
 export const About = () => {
+  const data = useStaticQuery(graphql`
+    query ClientLogos {
+      allFile(filter: { relativeDirectory: { eq: "client-logos" } }) {
+        edges {
+          node {
+            id
+            childImageSharp {
+              gatsbyImageData(width: 100)
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const logos = data.allFile.edges;
+
+  console.log(logos);
+
   return (
     <section className='white-container-section' id='about'>
       <h1 className='dark'>About</h1>
@@ -22,6 +43,11 @@ export const About = () => {
         support those who wish to make a difference, create meaningful and
         powerful change in the world.
       </p>
+      <div>
+        {logos.map((logo, i) => (
+          <ClientLogos path={logo} key={i} />
+        ))}
+      </div>
     </section>
   );
 };
