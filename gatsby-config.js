@@ -3,11 +3,13 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Canvas Philanthropy 2024`,
+    title: `Canvas Philanthropy`,
     siteUrl: `https://canvasphilanthropy.com/`,
     description: `We support inspirational people instigate meaningful and powerful change in the world. Established in 2015, we shape, launch and grow philanthropic and corporate socially responsible initiatives.`,
+    copyright: '©Canvas Philanthropy 2024',
   },
   plugins: [
+    `gatsby-transformer-remark`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
@@ -32,6 +34,13 @@ module.exports = {
             file: `https://use.typekit.net/emz5qfb.css`,
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `expertise`,
+        path: `${__dirname}/src/expertise`,
       },
     },
   ],

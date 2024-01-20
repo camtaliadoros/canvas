@@ -1,7 +1,20 @@
 import { StaticImage } from 'gatsby-plugin-image';
+import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 
 export const Footer = () => {
+  const data = useStaticQuery(graphql`
+    query SiteInfo {
+      site {
+        siteMetadata {
+          copyright
+        }
+      }
+    }
+  `);
+
+  const { copyright } = data.site.siteMetadata;
+
   return (
     <footer>
       <StaticImage
@@ -12,7 +25,7 @@ export const Footer = () => {
         className='footer-logo'
         width={60}
       />
-      <p>©Canvas Philanthropy 2024</p>
+      <p>{copyright}</p>
     </footer>
   );
 };
