@@ -9,8 +9,13 @@ export const Expertise = () => {
         nodes {
           frontmatter {
             description
-            iconPath
             title
+            iconPath {
+              id
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
           }
           id
         }
@@ -24,7 +29,7 @@ export const Expertise = () => {
     <section id='expertise'>
       <h1>EXPERTISE</h1>
       <h2>A Space to Grow</h2>
-      <div class='section-description'>
+      <div className='section-description'>
         <p className='large'>
           Our principle offering is through management of philanthropic and
           socially responsible initiatives. However, we offer a menu of services

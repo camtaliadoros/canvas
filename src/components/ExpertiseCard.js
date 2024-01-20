@@ -1,4 +1,4 @@
-import { StaticImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
 
 export const ExpertiseCard = ({ content, index }) => {
@@ -6,17 +6,15 @@ export const ExpertiseCard = ({ content, index }) => {
 
   const { title, description, iconPath } = content.frontmatter;
 
+  const icon = getImage(iconPath);
+
   return (
     <div className='expertise-card'>
       <div>
         <p className='expertise-index'>{cardNumber}</p>
       </div>
-
       <h3>{title}</h3>
-
-      {/* {iconPath && <StaticImage src={iconPath} alt='csr' width={78} />} */}
-      {/* <StaticImage src='../assets/icons/charity-establishment.png' /> */}
-      {/* <img src='../assets/icons/charity-establishment.png' /> */}
+      <GatsbyImage image={icon} alt='icon' />
       <p>{description}</p>
     </div>
   );

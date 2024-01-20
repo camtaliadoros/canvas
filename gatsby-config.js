@@ -11,11 +11,19 @@ module.exports = {
   plugins: [
     `gatsby-transformer-remark`,
     `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sass`,
     `gatsby-plugin-anchor-links`,
     `gatsby-plugin-netlify`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          placeholder: 'dominantColor',
+          backgroundColor: `transparent`,
+        },
+      },
+    },
+
     {
       resolve: `gatsby-omni-font-loader`,
       options: {
@@ -41,6 +49,13 @@ module.exports = {
       options: {
         name: `expertise`,
         path: `${__dirname}/src/expertise`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `assets`,
+        path: `${__dirname}/src/assets`,
       },
     },
   ],
