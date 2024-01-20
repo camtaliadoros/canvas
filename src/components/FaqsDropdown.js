@@ -23,8 +23,8 @@ export const FaqsDropdown = ({ content }) => {
           isOpen ? styles.openAnswer : null
         }`}
       >
-        {answer.map((paragraph) => (
-          <p>{paragraph}</p>
+        {answer.map((paragraph, i) => (
+          <p key={i}>{paragraph}</p>
         ))}
       </div>
     </div>
