@@ -9,7 +9,6 @@ module.exports = {
     copyright: '©Canvas Philanthropy 2024',
   },
   plugins: [
-    `gatsby-transformer-remark`,
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-anchor-links`,
@@ -56,6 +55,12 @@ module.exports = {
       options: {
         name: `assets`,
         path: `${__dirname}/src/assets`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-line-breaks`],
       },
     },
   ],

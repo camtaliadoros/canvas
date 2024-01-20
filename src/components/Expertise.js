@@ -10,10 +10,11 @@ export const Expertise = () => {
           frontmatter {
             description
             title
+            position
             iconPath {
               id
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(width: 78)
               }
             }
           }
@@ -23,7 +24,7 @@ export const Expertise = () => {
     }
   `);
 
-  const expertiseContent = data.allMarkdownRemark.nodes;
+  const expertiseContent = data.allMarkdownRemark.nodes.sort();
 
   return (
     <section id='expertise'>
@@ -44,8 +45,8 @@ export const Expertise = () => {
         </p>
       </div>
       <div className='expertise-cards-container'>
-        {expertiseContent.map((card, i) => {
-          return <ExpertiseCard content={card} key={card.id} index={i} />;
+        {expertiseContent.map((card) => {
+          return <ExpertiseCard content={card} key={card.id} />;
         })}
       </div>
     </section>

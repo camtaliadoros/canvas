@@ -24,6 +24,7 @@
     "gatsby-plugin-netlify": "^5.1.1",
     "gatsby-plugin-sass": "^6.13.0",
     "gatsby-plugin-sharp": "^5.13.0",
+    "gatsby-remark-line-breaks": "^1.0.0",
     "gatsby-source-filesystem": "^5.13.0",
     "gatsby-transformer-remark": "^6.13.0",
     "gatsby-transformer-sharp": "^5.13.0",

@@ -1,20 +1,18 @@
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
 
-export const ExpertiseCard = ({ content, index }) => {
-  const cardNumber = `0${index + 1}`;
-
-  const { title, description, iconPath } = content.frontmatter;
+export const ExpertiseCard = ({ content }) => {
+  const { title, description, iconPath, position } = content.frontmatter;
 
   const icon = getImage(iconPath);
 
   return (
     <div className='expertise-card'>
       <div>
-        <p className='expertise-index'>{cardNumber}</p>
+        <p className='expertise-index'>0{position}</p>
       </div>
       <h3>{title}</h3>
-      <GatsbyImage image={icon} alt='icon' />
+      <GatsbyImage image={icon} />
       <p>{description}</p>
     </div>
   );
