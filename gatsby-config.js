@@ -46,8 +46,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `expertise`,
-        path: `${__dirname}/src/expertise`,
+        name: `content`,
+        path: `${__dirname}/src/content`,
       },
     },
     {
@@ -61,6 +61,14 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [`gatsby-remark-line-breaks`],
+      },
+    },
+    {
+      resolve: 'gatsby-remark-images-grid',
+      options: {
+        className: 'myCustomClassName',
+        gridGap: '20px',
+        margin: '20px auto',
       },
     },
   ],

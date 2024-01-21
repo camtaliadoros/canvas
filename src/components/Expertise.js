@@ -5,7 +5,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 export const Expertise = () => {
   const data = useStaticQuery(graphql`
     query ExpertiseContent {
-      allMarkdownRemark {
+      allMarkdownRemark(sort: { frontmatter: { position: ASC } }) {
         nodes {
           frontmatter {
             description
@@ -24,7 +24,7 @@ export const Expertise = () => {
     }
   `);
 
-  const expertiseContent = data.allMarkdownRemark.nodes.sort();
+  const expertiseContent = data.allMarkdownRemark.nodes;
 
   return (
     <section id='expertise'>
@@ -45,8 +45,8 @@ export const Expertise = () => {
         </p>
       </div>
       <div className='expertise-cards-container'>
-        {expertiseContent.map((card) => {
-          return <ExpertiseCard content={card} key={card.id} />;
+        {expertiseContent.map((content) => {
+          return <ExpertiseCard content={content} key={content.id} />;
         })}
       </div>
     </section>
