@@ -4,26 +4,26 @@ import { ClientLogos } from './ClientLogos';
 import * as styles from '../styles/about.module.css';
 
 const sortedLogos = [
-  '01-7stars-foundation-logo',
-  '02-arete-foundation-logo',
-  '11-beattiefoundation',
-  'a-housing-justice',
-  'brixton-finishing-school',
-  'building-heroes',
-  'buildinglives',
-  'c3posttrade',
-  'cafedirect',
-  'footprint-foundation',
-  'justliving-foundation',
-  'kingdomchoir',
-  'lighthouse-club',
-  'national-housing',
-  'praetura-ventures',
-  'stefphilips',
-  'sureserve-group',
-  'tbs',
+  'housing-justice',
+  'beattiefoundation',
+  '7stars-foundation-logo',
   'tons-of-help',
+  'justliving-foundation',
+  'praetura-ventures',
+  'sureserve-group',
+  'c3posttrade',
+  'footprint-foundation',
+  'building-heroes',
+  'cafedirect',
+  'lighthouse-club',
+  'buildinglives',
+  'national-housing',
   'you-okay-doc',
+  'kingdomchoir',
+  'arete-foundation-logo',
+  'brixton-finishing-school',
+  'tbs',
+  'stefphilips',
 ];
 
 export const About = () => {
@@ -43,6 +43,10 @@ export const About = () => {
   `);
 
   const logos = data.allFile.nodes;
+  logos.sort(
+    (a, b) => sortedLogos.indexOf(a.name) - sortedLogos.indexOf(b.name)
+  );
+
   console.log(logos);
 
   return (
