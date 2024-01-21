@@ -9,6 +9,14 @@ module.exports = {
     copyright: '©Canvas Philanthropy 2024',
   },
   plugins: [
+    {
+      resolve: 'gatsby-remark-images-grid',
+      options: {
+        className: 'myCustomClassName',
+        gridGap: '20px',
+        margin: '20px auto',
+      },
+    },
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-anchor-links`,
@@ -61,14 +69,6 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [`gatsby-remark-line-breaks`],
-      },
-    },
-    {
-      resolve: 'gatsby-remark-images-grid',
-      options: {
-        className: 'myCustomClassName',
-        gridGap: '20px',
-        margin: '20px auto',
       },
     },
   ],

@@ -3,24 +3,47 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { ClientLogos } from './ClientLogos';
 import * as styles from '../styles/about.module.css';
 
+const sortedLogos = [
+  '01-7stars-foundation-logo',
+  '02-arete-foundation-logo',
+  '11-beattiefoundation',
+  'a-housing-justice',
+  'brixton-finishing-school',
+  'building-heroes',
+  'buildinglives',
+  'c3posttrade',
+  'cafedirect',
+  'footprint-foundation',
+  'justliving-foundation',
+  'kingdomchoir',
+  'lighthouse-club',
+  'national-housing',
+  'praetura-ventures',
+  'stefphilips',
+  'sureserve-group',
+  'tbs',
+  'tons-of-help',
+  'you-okay-doc',
+];
+
 export const About = () => {
   const data = useStaticQuery(graphql`
     query ClientLogos {
       allFile(filter: { relativeDirectory: { eq: "client-logos" } }) {
-        edges {
-          node {
-            id
-            childImageSharp {
-              gatsbyImageData
-            }
-            name
+        nodes {
+          id
+          name
+          childImageSharp {
+            gatsbyImageData
           }
+          relativePath
         }
       }
     }
   `);
 
-  const logos = data.allFile.edges;
+  const logos = data.allFile.nodes;
+  console.log(logos);
 
   return (
     <section className='white-container-section' id='about'>
