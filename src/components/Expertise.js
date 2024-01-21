@@ -26,8 +26,6 @@ export const Expertise = () => {
 
   const expertiseContent = data.allMarkdownRemark.nodes.sort();
 
-  console.log(expertiseContent);
-
   return (
     <section id='expertise'>
       <h1>EXPERTISE</h1>

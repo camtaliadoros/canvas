@@ -12,7 +12,7 @@ export const ExpertiseCard = ({ content }) => {
         <p className='expertise-index'>0{position}</p>
       </div>
       <h3>{title}</h3>
-      <GatsbyImage image={icon} />
+      <GatsbyImage image={icon} alt={title} />
       <p>{description}</p>
     </div>
   );

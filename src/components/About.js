@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { ClientLogos } from './ClientLogos';
+import * as styles from '../styles/about.module.css';
 
 export const About = () => {
   const data = useStaticQuery(graphql`
@@ -10,8 +11,9 @@ export const About = () => {
           node {
             id
             childImageSharp {
-              gatsbyImageData(width: 100)
+              gatsbyImageData
             }
+            name
           }
         }
       }
@@ -19,8 +21,6 @@ export const About = () => {
   `);
 
   const logos = data.allFile.edges;
-
-  console.log(logos);
 
   return (
     <section className='white-container-section' id='about'>
@@ -43,7 +43,7 @@ export const About = () => {
         support those who wish to make a difference, create meaningful and
         powerful change in the world.
       </p>
-      <div>
+      <div className={styles.logosContainer}>
         {logos.map((logo, i) => (
           <ClientLogos path={logo} key={i} />
         ))}

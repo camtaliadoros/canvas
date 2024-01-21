@@ -53,15 +53,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `expertise-icons`,
-        path: `${__dirname}/src/assets/expertise-icons`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `client-logos`,
-        path: `${__dirname}/src/assets/client-logos`,
+        name: `assets`,
+        path: `${__dirname}/src/assets`,
       },
     },
     {

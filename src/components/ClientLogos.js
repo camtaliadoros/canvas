@@ -4,5 +4,7 @@ import React from 'react';
 export const ClientLogos = ({ path }) => {
   const logo = getImage(path.node);
 
-  return <GatsbyImage image={logo} />;
+  const name = path.node.name;
+
+  return <GatsbyImage image={logo} alt={name} />;
 };
