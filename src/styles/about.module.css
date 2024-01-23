@@ -1,6 +1,18 @@
 .logosContainer {
   display: grid;
-  grid-template-columns: repeat(5, 100px);
-  gap: var(--large-space);
-  max-width: var(--medium);
+  grid-template-columns: repeat(5, 1fr);
+  place-items: center;
+  width: var(--medium);
+  gap: 72px var(--large-space);
+  margin-top: var(--large-space);
+}
+
+.logoContainer {
+  height: 42px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  max-height: 30px;
 }

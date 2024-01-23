@@ -47,8 +47,6 @@ export const About = () => {
     (a, b) => sortedLogos.indexOf(a.name) - sortedLogos.indexOf(b.name)
   );
 
-  console.log(logos);
-
   return (
     <section className='white-container-section' id='about'>
       <h1 className='dark'>About</h1>
