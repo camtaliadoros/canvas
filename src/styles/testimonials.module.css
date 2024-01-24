@@ -42,7 +42,7 @@
 
   & > p {
     text-align: left;
-    max-width: var(--narrow);
+    max-width: var(--desktop-narrow);
   }
 }
 

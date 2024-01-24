@@ -18,9 +18,10 @@
   --xl-space: 42px;
 
   /* Content Space */
-  --narrow: 440px;
-  --medium: 540px;
-  --wide: 900px;
+  --mobile-narrow: 260px;
+  --desktop-narrow: 440px;
+  --desktop-medium: 540px;
+  --desktop-wide: 900px;
 
   /* screen size breakpoints */
   --tablet: 480px;
@@ -50,7 +51,6 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: var(--medium-space);
 }
 
 @media screen and (min-width: var(--desktop)) {
@@ -60,20 +60,22 @@ main {
 }
 
 section {
-  margin-bottom: 200px;
+  margin-bottom: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 var(--medium-space);
 }
 
 @media screen and (min-width: var(--desktop)) {
   section {
     width: 66%;
+    margin-bottom: 200px;
   }
 }
 
 .section-description {
-  max-width: var(--medium);
+  max-width: var(--desktop-medium);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -132,10 +134,17 @@ h3 {
 h4 {
   font-family: ivyora-display, sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.4em;
-  max-width: var(--narrow);
   margin-bottom: var(--medium-space);
+  max-width: var(--mobile-narrow);
+}
+
+@media screen and (min-width: var(--desktop)) {
+  h4 {
+    max-width: var(--desktop-narrow);
+    font-size: 16px;
+  }
 }
 
 h5 {
@@ -195,13 +204,13 @@ a {
 }
 
 .centered-text-container {
-  max-width: var(--narrow);
+  max-width: var(--desktop-narrow);
   margin: 0 auto;
 }
 
 .white-container-section {
   background-color: var(--white);
-  padding: 120px 0;
+  padding: 90px var(--xl-space);
 
   & > h2 {
     margin-bottom: var(--xl-space);
@@ -209,7 +218,7 @@ a {
 
   & > p {
     margin-bottom: var(--medium-space);
-    max-width: var(--narrow);
+    max-width: var(--desktop-narrow);
   }
 
   & > h1,
@@ -219,6 +228,12 @@ a {
   h5,
   p {
     color: var(--black);
+  }
+}
+
+@media screen and (min-width: var(--desktop)) {
+  .white-container-section {
+    padding: 120px 0;
   }
 }
 
