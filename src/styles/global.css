@@ -21,6 +21,22 @@
   --narrow: 440px;
   --medium: 540px;
   --wide: 900px;
+
+  /* screen size breakpoints */
+  --tablet: 480px;
+  --desktop: 768px;
+}
+
+@font-face {
+  font-family: 'ABC Normal Regular';
+  src: url('../../static/fonts/abcnormal-regular.woff2') format('woff2'),
+    url('../../static/fonts/abcnormal-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'ABC Normal Book';
+  src: url('../../static/fonts/abcnormal-book.woff2') format('woff2');
+  src: url('../../static/fonts/abcnormal-book.woff') format('woff');
 }
 
 * {
@@ -38,11 +54,16 @@ main {
 }
 
 section {
-  width: 66%;
   margin-bottom: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media screen and (min-width: var(--desktop)) {
+  section {
+    width: 66%;
+  }
 }
 
 .section-description {
@@ -63,18 +84,30 @@ p {
 }
 
 h1 {
-  font-size: 10px;
+  font-size: 12px;
   line-height: 24px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   font-family: 'ABC Normal Book';
 }
 
+@media screen and (min-width: var(--desktop)) {
+  h1 {
+    font-size: 10px;
+  }
+}
+
 h2 {
   font-family: ivyora-display, sans-serif;
   font-weight: 300;
-  font-size: 66px;
+  font-size: 60px;
   margin-bottom: var(--medium-space);
+}
+
+@media screen and (min-width: var(--desktop)) {
+  h2 {
+    font-size: 66px;
+  }
 }
 
 h3 {

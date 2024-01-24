@@ -41,10 +41,6 @@ module.exports = {
         ],
         web: [
           {
-            name: `ABCNormal Book`,
-            file: `https://db.onlinewebfonts.com/c/bad5d85dec62adc89f2f88300b74dd63?family=ABC+Normal+Book`,
-          },
-          {
             name: `Ivy Ora`,
             file: `https://use.typekit.net/emz5qfb.css`,
           },
