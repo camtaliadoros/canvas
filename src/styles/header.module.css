@@ -21,18 +21,24 @@
 }
 
 .contactLinkContainer {
-  display: flex;
-  position: fixed;
-  top: 90px;
-  right: 90px;
+  display: none;
+}
 
-  & > a {
-    font-family: 'ABC Normal Book';
-    color: var(--white);
-    font-size: 14px;
-    text-decoration: none;
-    width: 100%;
+@media screen and (min-width: var(--desktop)) {
+  .contactLinkContainer {
     display: flex;
+    position: fixed;
+    top: 90px;
+    right: 90px;
+
+    & > a {
+      font-family: 'ABC Normal Book';
+      color: var(--white);
+      font-size: 14px;
+      text-decoration: none;
+      width: 100%;
+      display: flex;
+    }
   }
 }
 
