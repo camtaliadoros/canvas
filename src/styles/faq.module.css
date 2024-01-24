@@ -42,6 +42,11 @@
   width: 100%;
   cursor: pointer;
 
+  & p {
+    text-align: left;
+    max-width: 90%;
+  }
+
   :global .large {
     margin-bottom: 0;
   }
