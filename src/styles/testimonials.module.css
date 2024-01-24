@@ -39,6 +39,18 @@
   }
 }
 
+.logoContainer {
+  display: flex;
+  align-items: center;
+  height: 54px;
+  margin: var(--small-space) 0;
+
+  & > img {
+    height: 30px;
+    max-width: 110px;
+  }
+}
+
 .circle {
   width: 1.2em;
   height: 1.2em;

@@ -7,7 +7,9 @@ export const TestimonialCard = ({ content }) => {
   return (
     <div className={styles.cardContainer}>
       <div className={styles.circle} />
-      <img src={logoPath.publicURL} alt='company logo' />
+      <div className={styles.logoContainer}>
+        <img src={logoPath.publicURL} alt='company logo' />
+      </div>
       <p className={styles.blurb}>{blurb}</p>
 
       <p className={styles.title}>{title}</p>
