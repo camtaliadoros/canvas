@@ -5,7 +5,10 @@ import { graphql, useStaticQuery } from 'gatsby';
 export const Expertise = () => {
   const data = useStaticQuery(graphql`
     query ExpertiseContent {
-      allMarkdownRemark(sort: { frontmatter: { position: ASC } }) {
+      allMarkdownRemark(
+        filter: { frontmatter: { type: { eq: "expertise" } } }
+        sort: { frontmatter: { position: ASC } }
+      ) {
         nodes {
           frontmatter {
             description
@@ -25,8 +28,6 @@ export const Expertise = () => {
   `);
 
   const expertiseContent = data.allMarkdownRemark.nodes;
-
-  console.log(expertiseContent);
 
   return (
     <section id='expertise'>
