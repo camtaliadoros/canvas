@@ -50,7 +50,13 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: var(--xl-space);
+  padding: var(--medium-space);
+}
+
+@media screen and (min-width: var(--desktop)) {
+  main {
+    padding: var(--xl-space);
+  }
 }
 
 section {
@@ -141,12 +147,12 @@ h5 {
 
 p {
   font-family: 'ABC Normal Book';
-  font-size: 12px;
   line-height: 1.5em;
   margin-bottom: var(--xs-space);
+  font-size: 15px;
 
   &.large {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.5em;
     margin-bottom: var(--medium-space);
   }
@@ -158,6 +164,8 @@ p {
 
 @media screen and (min-width: var(--desktop)) {
   p {
+    font-size: 12px;
+
     &.large {
       font-size: 18px;
     }

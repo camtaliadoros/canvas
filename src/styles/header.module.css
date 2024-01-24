@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  position: fixed;
+  position: absolute;
   top: 30px;
   left: 30px;
 
@@ -13,6 +13,7 @@
   .header {
     top: 90px;
     left: 90px;
+    position: fixed;
 
     & img {
       width: 60px;
