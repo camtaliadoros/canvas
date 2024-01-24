@@ -25,7 +25,7 @@
   }
 }
 
-@media screen and (min-width: var(--desktop)) {
+@media screen and (min-width: 768px) {
   .container {
     flex-direction: row;
     align-items: flex-start;
@@ -58,7 +58,7 @@
   }
 }
 
-@media screen and (min-width: var(--desktop)) {
+@media screen and (min-width: 768px) {
   .logoContainer {
     height: 54px;
     & > img {
@@ -75,7 +75,7 @@
   background-color: var(--medium-grey);
 }
 
-@media screen and (min-width: var(--desktop)) {
+@media screen and (min-width: 768px) {
   .circle {
     width: 1.2em;
     height: 1.2em;
