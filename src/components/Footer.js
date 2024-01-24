@@ -23,7 +23,6 @@ export const Footer = () => {
         placeholder='blurred'
         loading='lazy'
         className='footer-logo'
-        width={60}
       />
       <p>{copyright}</p>
     </footer>

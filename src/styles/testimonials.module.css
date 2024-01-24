@@ -72,7 +72,7 @@
   width: 1.6em;
   height: 1.6em;
   border-radius: 50%;
-  background-color: var(--dark-grey);
+  background-color: var(--medium-grey);
 }
 
 @media screen and (min-width: var(--desktop)) {
