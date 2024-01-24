@@ -1,6 +1,7 @@
 import React from 'react';
 import { ExpertiseCard } from './ExpertiseCard';
 import { graphql, useStaticQuery } from 'gatsby';
+import * as styles from '../styles/expertise.module.css';
 
 export const Expertise = () => {
   const data = useStaticQuery(graphql`
@@ -17,7 +18,7 @@ export const Expertise = () => {
             iconPath {
               id
               childImageSharp {
-                gatsbyImageData(width: 78)
+                gatsbyImageData
               }
             }
           }
@@ -47,7 +48,7 @@ export const Expertise = () => {
           from donors.
         </p>
       </div>
-      <div className='expertise-cards-container'>
+      <div className={styles.expertiseCardsContainer}>
         {expertiseContent.map((content) => {
           return <ExpertiseCard content={content} key={content.id} />;
         })}

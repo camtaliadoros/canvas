@@ -1,0 +1,64 @@
+.expertiseCardsContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--large-space) 0;
+  margin-top: var(--xl-space);
+}
+
+@media screen and (min-width: var(--desktop)) {
+  .expertiseCardsContainer {
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    gap: var(--xl-space);
+  }
+}
+
+.expertiseCard {
+  background-color: var(--light-stone);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  padding: var(--large-space);
+  align-items: start;
+  justify-items: start;
+  gap: var(--small-space) 0;
+
+  & p {
+    color: var(--black);
+    text-align: left;
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: var(--desktop)) {
+  .expertiseCard {
+    display: grid;
+    grid-template: 1fr 2fr / 1fr 2fr;
+    padding: var(--large-space);
+    align-items: start;
+    justify-items: start;
+    height: 380px;
+  }
+}
+
+.expertiseIndex {
+  border-bottom: 1px solid var(--black);
+  margin-bottom: var(--medium-space);
+}
+
+@media screen and (min-width: var(--desktop)) {
+  .expertiseIndex {
+    margin-bottom: 0;
+  }
+}
+
+.expertiseIcon {
+  width: 90px;
+  margin-bottom: var(--medium-space);
+}
+
+@media screen and (min-width: var(--desktop)) {
+  .expertiseIcon {
+    width: 78px;
+    margin-bottom: 0;
+  }
+}
