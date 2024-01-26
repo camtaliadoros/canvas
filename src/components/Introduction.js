@@ -1,5 +1,6 @@
 import React from 'react';
 import * as styles from '../styles/introduction.module.css';
+import { Testimonials } from './Testimonials';
 
 export const Introduction = () => {
   return (
@@ -13,6 +14,7 @@ export const Introduction = () => {
           philanthropic and corporate socially responsible initiatives.
         </p>
       </div>
+      <Testimonials />
     </section>
   );
 };

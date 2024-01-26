@@ -2,9 +2,9 @@ import * as React from 'react';
 import { About } from '../components/About';
 import { Contact } from '../components/Contact';
 import { Expertise } from '../components/Expertise';
+import { Faqs } from '../components/Faqs';
 import { Footer } from '../components/Footer';
 import { Founder } from '../components/Founder';
-import { Faqs } from '../components/Faqs';
 import { Header } from '../components/Header';
 import { Introduction } from '../components/Introduction';
 import { Nav } from '../components/Nav';
@@ -18,7 +18,6 @@ export default function Home() {
       <Nav />
       <main>
         <Introduction />
-        <Testimonials />
         <About />
         <Expertise />
         <Founder />

@@ -34,10 +34,10 @@ export const Testimonials = () => {
   );
 
   return (
-    <section className={styles.container} id='testimonials'>
+    <div className={styles.container}>
       {featuredTestimonials.map((content, i) => (
         <TestimonialCard content={content} key={i} />
       ))}
-    </section>
+    </div>
   );
 };
