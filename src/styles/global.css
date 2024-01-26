@@ -27,14 +27,14 @@
 
 @font-face {
   font-family: 'ABC Normal Regular';
-  src: url('../../static/fonts/abcnormal-regular.woff2') format('woff2'),
-    url('../../static/fonts/abcnormal-regular.woff') format('woff');
+  src: url('../../public/fonts/abcnormal-regular.woff2') format('woff2');
+  src: url('../../public/fonts/abcnormal-regular.woff') format('woff');
 }
 
 @font-face {
   font-family: 'ABC Normal Book';
-  src: url('../../static/fonts/abcnormal-book.woff2') format('woff2');
-  src: url('../../static/fonts/abcnormal-book.woff') format('woff');
+  src: url('../../public/fonts/abcnormal-book.woff2') format('woff2');
+  src: url('../../public/fonts/abcnormal-book.woff') format('woff');
 }
 
 * {

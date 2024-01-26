@@ -9,6 +9,7 @@ module.exports = {
     copyright: '©Canvas Philanthropy 2024',
   },
   plugins: [
+    `gatsby-plugin-preload-fonts`,
     {
       resolve: 'gatsby-remark-images-grid',
       options: {

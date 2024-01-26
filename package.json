@@ -10,7 +10,8 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "preload-fonts": "gatsby-preload-fonts"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
@@ -22,6 +23,7 @@
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-image": "^3.13.0",
     "gatsby-plugin-netlify": "^5.1.1",
+    "gatsby-plugin-preload-fonts": "^4.13.1",
     "gatsby-plugin-sass": "^6.13.0",
     "gatsby-plugin-sharp": "^5.13.0",
     "gatsby-remark-images-grid": "^1.2.0",
