@@ -4,28 +4,28 @@
 
 .answerContainer {
   background-color: rgba(255, 255, 255, 0.1);
+  display: grid;
+  grid-template-rows: 0fr;
   text-align: left;
-  transition: max-height 0.5s;
-  max-height: 0;
-  overflow: hidden;
+  transition: grid-template-rows 0.5s;
   border: none;
   padding: 0;
 
   &.openAnswer {
-    display: block;
-    max-height: 300px;
+    grid-template-rows: 1fr;
   }
 
   & p {
-    padding: 0 var(--medium-space);
+    overflow: hidden;
+    margin: var(--medium-space);
 
-    &:first-of-type {
+    /* &:first-of-type {
       padding-top: var(--medium-space);
-    }
+    } */
 
-    &:last-of-type {
+    /* &:last-of-type {
       padding-bottom: var(--medium-space);
-    }
+    } */
   }
 }
 
@@ -49,6 +49,14 @@
 
   :global .large {
     margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .questionContainer {
+    & p {
+      max-width: none;
+    }
   }
 }
 

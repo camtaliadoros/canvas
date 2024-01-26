@@ -4,7 +4,10 @@ import * as styles from '../styles/faq.module.css';
 export const FaqsDropdown = ({ content }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const { question, answer } = content;
+  // const { question, answer } = content;
+
+  const question = content.frontmatter.question;
+  const answer = content.internal.content;
 
   const handleClick = () => {
     setIsOpen((prevState) => !prevState);
@@ -23,9 +26,7 @@ export const FaqsDropdown = ({ content }) => {
           isOpen ? styles.openAnswer : null
         }`}
       >
-        {answer.map((paragraph, i) => (
-          <p key={i}>{paragraph}</p>
-        ))}
+        <p>{answer}</p>
       </div>
     </div>
   );

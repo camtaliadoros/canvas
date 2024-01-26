@@ -168,6 +168,7 @@ p {
   line-height: 1.5em;
   margin-bottom: var(--xs-space);
   font-size: 15px;
+  white-space: pre-wrap;
 
   &.large {
     font-size: 16px;
@@ -185,7 +186,7 @@ p {
     font-size: 12px;
 
     &.large {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
 }
