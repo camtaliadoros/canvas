@@ -7,17 +7,18 @@
   display: grid;
   grid-template-rows: 0fr;
   text-align: left;
-  transition: grid-template-rows 0.5s;
+  transition: grid-template-rows 0.5s, padding 0.1s;
   border: none;
-  padding: 0;
+  padding: 0 var(--medium-space);
 
   &.openAnswer {
     grid-template-rows: 1fr;
+    padding: var(--medium-space);
   }
 
   & p {
     overflow: hidden;
-    margin: var(--medium-space);
+    margin: 0;
 
     /* &:first-of-type {
       padding-top: var(--medium-space);
