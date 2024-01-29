@@ -7,7 +7,11 @@ export const Contact = () => {
       <h5>
         Get in touch today to find out how we can assist you with X, Y and Z
       </h5>
-      <a className='email' href='mailto:info@canvasphilanthropy.com'>
+      <a
+        className='email'
+        href='mailto:info@canvasphilanthropy.com'
+        target='_blank'
+      >
         info@canvasphilanthropy.com
       </a>
     </section>

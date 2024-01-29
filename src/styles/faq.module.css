@@ -1,5 +1,6 @@
 .container {
   width: 100%;
+  position: relative;
 }
 
 .answerContainer {
@@ -70,6 +71,8 @@
   width: 12px;
   transform: rotate(-45deg);
   transition: transform 0.5s;
+  position: absolute;
+  right: 2px;
 
   &.openChevron {
     transform: rotate(135deg);

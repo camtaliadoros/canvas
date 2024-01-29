@@ -18,7 +18,9 @@ export const Header = () => {
         </AnchorLink>
       </div>
       <div className={styles.contactLinkContainer}>
-        <a href='mailto:info@canvasphilanthropy.com'>Contact us</a>
+        <a href='mailto:info@canvasphilanthropy.com' target='_blank'>
+          Contact us
+        </a>
       </div>
     </>
   );
