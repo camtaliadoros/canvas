@@ -95,6 +95,7 @@ h1 {
   letter-spacing: 0.3em;
   text-transform: uppercase;
   font-family: 'ABC Normal Regular';
+  margin-bottom: var(--small-space);
 }
 
 @media screen and (min-width: 768px) {
@@ -126,6 +127,7 @@ h3 {
   white-space: pre-wrap;
   position: relative;
   top: -6px;
+  line-height: 1.5;
 }
 
 @media screen and (min-width: 768px) {
