@@ -2,7 +2,7 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import React, { useState, useEffect } from 'react';
 import * as styles from '../styles/nav.module.css';
 
-const sections = [
+const navSections = [
   {
     id: '#introduction',
     title: 'Introduction',
@@ -26,7 +26,14 @@ const sections = [
 ];
 
 export const Nav = () => {
-  const [visibleSection, setVisibleSection] = useState('');
+  const [visibleSection, setVisibleSection] = useState('introduction');
+
+  const navHeight = 30.5;
+  const activeSectionIndex = navSections.findIndex((section) => {
+    return section.title.toLowerCase() === visibleSection;
+  });
+
+  const markerPosition = activeSectionIndex * navHeight + navHeight / 2.3;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,7 +63,7 @@ export const Nav = () => {
   return (
     <nav className={styles.navContainer}>
       <ul>
-        {sections.map((section) => {
+        {navSections.map((section) => {
           return (
             <li
               className={
@@ -69,6 +76,7 @@ export const Nav = () => {
           );
         })}
       </ul>
+      <div className={styles.sectionMarker} style={{ top: markerPosition }} />
     </nav>
   );
 };

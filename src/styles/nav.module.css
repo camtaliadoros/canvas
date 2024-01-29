@@ -22,7 +22,9 @@
       padding: 6px 0;
 
       &.active {
-        background-color: blue;
+        & > a {
+          color: var(--green);
+        }
       }
 
       a {
@@ -30,13 +32,23 @@
         color: var(--white);
         font-family: 'ABC Normal Book';
         font-size: 12px;
-        transition: color 0.5s;
+        transition: color 0.2s;
 
         &:hover {
           color: var(--green);
-          transition: color 0.5s;
         }
       }
+    }
+
+    .sectionMarker {
+      width: 6px;
+      height: 6px;
+      background-color: var(--green);
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      right: -12px;
+      transition: top 0.2s;
     }
   }
 }
