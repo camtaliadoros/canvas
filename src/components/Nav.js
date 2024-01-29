@@ -25,6 +25,8 @@ const navSections = [
   },
 ];
 
+let shouldWatchScroll = true;
+
 export const Nav = () => {
   const [visibleSection, setVisibleSection] = useState('introduction');
 
@@ -37,20 +39,22 @@ export const Nav = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = document.querySelectorAll('section');
-      const scrollPosition = window.scrollY;
+      if (shouldWatchScroll) {
+        const sections = document.querySelectorAll('section');
+        const scrollPosition = window.scrollY;
 
-      sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
 
-        if (
-          scrollPosition >= sectionTop &&
-          scrollPosition < sectionTop + sectionHeight
-        ) {
-          setVisibleSection(section.id);
-        }
-      });
+          if (
+            scrollPosition >= sectionTop &&
+            scrollPosition < sectionTop + sectionHeight
+          ) {
+            setVisibleSection(section.id);
+          }
+        });
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -60,6 +64,13 @@ export const Nav = () => {
     };
   }, []);
 
+  const handleAnchorClick = (sectionTitle) => {
+    shouldWatchScroll = false;
+    setVisibleSection(sectionTitle);
+    setTimeout(() => {
+      shouldWatchScroll = true;
+    }, 200);
+  };
   return (
     <nav className={styles.navContainer}>
       <ul>
@@ -71,7 +82,12 @@ export const Nav = () => {
               }
               key={section.id}
             >
-              <AnchorLink to={section.id}>{section.title}</AnchorLink>
+              <AnchorLink
+                to={section.id}
+                onAnchorLinkClick={() => handleAnchorClick(section.title)}
+              >
+                {section.title}
+              </AnchorLink>
             </li>
           );
         })}
