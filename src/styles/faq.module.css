@@ -10,10 +10,12 @@
   transition: grid-template-rows 0.5s, padding 0.1s;
   border: none;
   padding: 0 var(--medium-space);
+  margin: 0;
 
   &.openAnswer {
     grid-template-rows: 1fr;
     padding: var(--medium-space);
+    padding-bottom: var(--xl-space);
   }
 
   & p {
