@@ -30,12 +30,12 @@ let shouldWatchScroll = true;
 export const Nav = () => {
   const [visibleSection, setVisibleSection] = useState('introduction');
 
-  const navHeight = 30.5;
+  const navHeight = 32;
   const activeSectionIndex = navSections.findIndex((section) => {
     return section.title.toLowerCase() === visibleSection;
   });
 
-  const markerPosition = activeSectionIndex * navHeight + navHeight / 2.3;
+  const markerPosition = activeSectionIndex * navHeight + navHeight / 2.2;
 
   useEffect(() => {
     const handleScroll = () => {
