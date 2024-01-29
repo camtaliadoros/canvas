@@ -13,6 +13,7 @@ export const Header = () => {
             alt='canvas-logo'
             placeholder='blurred'
             loading='eager'
+            className={styles.logo}
           />
         </AnchorLink>
       </div>

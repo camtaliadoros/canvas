@@ -4,7 +4,7 @@
   top: 30px;
   left: 30px;
 
-  & img {
+  & .logo {
     width: 90px;
   }
 }
@@ -15,7 +15,7 @@
     left: 90px;
     position: fixed;
 
-    & img {
+    & .logo {
       width: 60px;
     }
   }
