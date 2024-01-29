@@ -66,10 +66,11 @@ export const Nav = () => {
 
   const handleAnchorClick = (sectionTitle) => {
     shouldWatchScroll = false;
-    setVisibleSection(sectionTitle);
+
+    setVisibleSection(sectionTitle.toLowerCase());
     setTimeout(() => {
       shouldWatchScroll = true;
-    }, 200);
+    }, 1000);
   };
   return (
     <nav className={styles.navContainer}>
@@ -83,7 +84,7 @@ export const Nav = () => {
               key={section.id}
             >
               <AnchorLink
-                to={section.id}
+                to={`/${section.id}`}
                 onAnchorLinkClick={() => handleAnchorClick(section.title)}
               >
                 {section.title}
