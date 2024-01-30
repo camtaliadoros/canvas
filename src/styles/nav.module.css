@@ -34,6 +34,7 @@
         color: var(--white);
         font-family: 'ABC Normal Book';
         font-size: 12px;
+        line-height: 12px;
         transition: color 0.2s;
 
         &:hover {

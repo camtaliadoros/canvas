@@ -41,12 +41,6 @@ export const Expertise = () => {
           for those partners who have a particular requirement in their
           non-profit operation.
         </p>
-        <p className='large'>
-          No matter your fundraising goal we will work with you to construct and
-          achieve a fruitful strategy which will not only raise income, but
-          engage supporters – achieving both commercial and emotional investment
-          from donors.
-        </p>
       </div>
       <div className={styles.expertiseCardsContainer}>
         {expertiseContent.map((content) => {
