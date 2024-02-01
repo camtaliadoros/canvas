@@ -7,15 +7,13 @@ export const Header = () => {
   return (
     <>
       <div className={styles.header}>
-        <AnchorLink to='#introduction'>
-          <StaticImage
-            src='../assets/canvas-logo.png'
-            alt='canvas-logo'
-            placeholder='blurred'
-            loading='eager'
-            className={styles.logo}
-          />
-        </AnchorLink>
+        <StaticImage
+          src='../assets/canvas-logo.png'
+          alt='canvas-logo'
+          placeholder='blurred'
+          loading='eager'
+          className={styles.logo}
+        />
       </div>
       <div className={styles.contactLinkContainer}>
         <a href='mailto:alexandra@canvasphilanthropy.com' target='_blank'>
