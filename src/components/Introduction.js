@@ -1,6 +1,9 @@
 import React from 'react';
 import * as styles from '../styles/introduction.module.css';
 import { Testimonials } from './Testimonials';
+// import Sphere from '../assets/sphere.mp4';
+import Sphere from '../assets/Ball-with-Feather.mp4';
+import SphereStill from '../assets/spherestill.png';
 
 export const Introduction = () => {
   return (
@@ -13,6 +16,11 @@ export const Introduction = () => {
           change in the world. Established in 2015, we shape, launch and grow
           philanthropic and corporate socially responsible initiatives.
         </p>
+      </div>
+      <div className={styles.videoContainer}>
+        <video autoPlay loop muted playsInline className={styles.video}>
+          <source src={Sphere} type='video/mp4' />
+        </video>
       </div>
       <Testimonials />
     </section>
