@@ -8,11 +8,17 @@
   margin-top: var(--large-space);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .logosContainer {
     grid-template-columns: repeat(5, 1fr);
     width: var(--desktop-medium);
     gap: 72px var(--large-space);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .logosContainer {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -27,7 +33,7 @@
   max-width: 30px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .logo {
     max-height: 30px;
   }

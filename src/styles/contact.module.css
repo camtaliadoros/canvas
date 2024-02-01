@@ -4,12 +4,17 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 0;
-  padding: 72px var(--medium-space);
-  background-color: var(--black);
+  padding: 72px var(--xl-space);
   width: 100%;
   background-color: var(--dark-grey);
 
   & h5 {
     text-align: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  h5 {
+    width: 66%;
   }
 }

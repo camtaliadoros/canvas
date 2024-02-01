@@ -40,11 +40,12 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: stretch;
+    gap: var(--medium-space);
   }
 }
 
@@ -65,7 +66,7 @@
 .logoContainer {
   display: flex;
   align-items: center;
-  height: 72px;
+  max-height: 72px;
   margin: var(--small-space) 0;
 
   & > img {
@@ -74,12 +75,11 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .logoContainer {
     height: 54px;
     & > img {
-      height: 30px;
-      max-width: 110px;
+      max-width: 100px;
     }
   }
 }
@@ -91,7 +91,7 @@
   background-color: var(--medium-grey);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .circle {
     width: 1.2em;
     height: 1.2em;

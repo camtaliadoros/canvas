@@ -50,7 +50,7 @@ main {
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   main {
     padding: var(--xl-space);
   }
@@ -64,7 +64,7 @@ section {
   padding: 0 var(--medium-space);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   section {
     width: 66%;
     margin-bottom: 200px;
@@ -98,7 +98,7 @@ h1 {
   margin-bottom: var(--small-space);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   h1 {
     font-size: 10px;
   }
@@ -112,7 +112,7 @@ h2 {
   line-height: 1.2em;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   h2 {
     font-size: 66px;
   }
@@ -130,7 +130,7 @@ h3 {
   line-height: 1.5;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   h3 {
     font-size: 22px;
     line-height: 28px;
@@ -146,7 +146,7 @@ h4 {
   max-width: var(--mobile-narrow);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   h4 {
     max-width: var(--desktop-narrow);
     font-size: 16px;
@@ -160,9 +160,15 @@ h5 {
   line-height: 1.5;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   h5 {
     font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  h5 {
+    font-size: 20px;
   }
 }
 
@@ -184,7 +190,7 @@ p {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   p {
     font-size: 12px;
 
@@ -216,7 +222,15 @@ a {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 320px) {
+  a {
+    &.email {
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
   a {
     &.email {
       font-size: 22px;
@@ -232,6 +246,7 @@ a {
 .white-container-section {
   background-color: var(--white);
   padding: 90px var(--xl-space);
+  width: 100vw;
 
   & > h2 {
     margin-bottom: var(--xl-space);
@@ -252,9 +267,10 @@ a {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .white-container-section {
     padding: 120px 0;
+    width: 66%;
   }
 }
 
@@ -286,7 +302,7 @@ footer {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   footer {
     padding: var(--large-space) 90px;
 
