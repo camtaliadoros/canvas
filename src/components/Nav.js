@@ -29,7 +29,7 @@ let shouldWatchScroll = true;
 
 export const Nav = () => {
   const [visibleSection, setVisibleSection] = useState('introduction');
-
+  const [loaded, setLoaded] = useState(false);
   const navHeight = 32;
   const halfMarkerHeight = 3;
   const xHeightDelta = 1;
@@ -63,7 +63,11 @@ export const Nav = () => {
       }
     };
 
+    handleScroll();
+
     window.addEventListener('scroll', handleScroll);
+
+    setLoaded(true);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -100,7 +104,9 @@ export const Nav = () => {
           );
         })}
       </ul>
-      <div className={styles.sectionMarker} style={{ top: markerPosition }} />
+      {loaded && (
+        <div className={styles.sectionMarker} style={{ top: markerPosition }} />
+      )}
     </nav>
   );
 };
