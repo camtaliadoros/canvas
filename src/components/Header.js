@@ -1,7 +1,6 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import * as styles from '../styles/header.module.css';
-import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 export const Header = () => {
   return (
@@ -16,7 +15,11 @@ export const Header = () => {
         />
       </div>
       <div className={styles.contactLinkContainer}>
-        <a href='mailto:alexandra@canvasphilanthropy.com' target='_blank'>
+        <a
+          href='mailto:alexandra@canvasphilanthropy.com'
+          target='_blank'
+          rel='noreferrer'
+        >
           Contact us
         </a>
       </div>

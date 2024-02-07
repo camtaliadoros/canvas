@@ -12,6 +12,7 @@ export const Contact = () => {
         className='email'
         href='mailto:alexandra@canvasphilanthropy.com'
         target='_blank'
+        rel='noreferrer'
       >
         alexandra@canvasphilanthropy.com
       </a>

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useEffect } from 'react';
 import { About } from '../components/About';
 import { Contact } from '../components/Contact';
 import { Expertise } from '../components/Expertise';
@@ -11,7 +12,11 @@ import { Nav } from '../components/Nav';
 import '../styles/global.css';
 
 export default function Home() {
-  const browserInfo = navigator.userAgent;
+  let browserInfo;
+
+  useEffect(() => {
+    browserInfo = navigator.userAgent;
+  }, []);
 
   return (
     <>
