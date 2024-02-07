@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import * as styles from '../styles/testimonials.module.css';
 import { TestimonialCard } from './TestimonialCard';
 import { graphql, useStaticQuery } from 'gatsby';
@@ -27,7 +27,12 @@ export const Testimonials = () => {
     }
   `);
 
-  const groupNumber = Math.floor(Math.random() * 4) + 1;
+  const [groupNumber, setGroupNumber] = useState();
+
+  useEffect(() => {
+    setGroupNumber(Math.floor(Math.random() * 4) + 1);
+  }, []);
+
   const allTestimonials = data.allMarkdownRemark.nodes;
   const featuredTestimonials = allTestimonials.filter(
     (testimonial) => testimonial.frontmatter.group === groupNumber
