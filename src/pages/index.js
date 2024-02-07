@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { useEffect } from 'react';
 import { About } from '../components/About';
 import { Contact } from '../components/Contact';
 import { Expertise } from '../components/Expertise';
@@ -12,9 +11,9 @@ import { Nav } from '../components/Nav';
 import '../styles/global.css';
 
 export default function Home() {
-  let browserInfo;
+  let browserInfo = [];
 
-  useEffect(() => {
+  React.useMemo(() => {
     browserInfo = navigator.userAgent;
   }, []);
 

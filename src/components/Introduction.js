@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useEffect, useMemo } from 'react';
 import * as styles from '../styles/introduction.module.css';
 import { Testimonials } from './Testimonials';
 import Sphere from '../assets/Ball-with-Feather.webm';
 import SphereMp4 from '../assets/sphere.mp4';
 
-const browserInfo = navigator?.userAgent;
-
 export const Introduction = () => {
+  let browserInfo = [];
+
+  useMemo(() => {
+    browserInfo = window.navigator.userAgent;
+  });
+
   return (
     <section className={styles.container} id='introduction'>
       <h1>INTRODUCTION</h1>
@@ -27,11 +31,8 @@ export const Introduction = () => {
           disableRemotePlayback
           className={styles.video}
         >
-          {browserInfo.includes('Safari') ? (
-            <source src={SphereMp4} type='video/mp4' />
-          ) : (
-            <source src={Sphere} type='video/webm' />
-          )}
+          <source src={Sphere} type='video/webm' />
+          <source src={SphereMp4} type='video/mp4' />
         </video>
       </div>
       <Testimonials />
