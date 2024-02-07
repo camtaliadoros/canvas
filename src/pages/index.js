@@ -14,7 +14,7 @@ export default function Home() {
   let browserInfo = [];
 
   React.useMemo(() => {
-    browserInfo = navigator.userAgent;
+    browserInfo = window.navigator.userAgent;
   }, []);
 
   return (
