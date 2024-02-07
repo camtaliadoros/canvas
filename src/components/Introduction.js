@@ -31,8 +31,11 @@ export const Introduction = () => {
           disableRemotePlayback
           className={styles.video}
         >
-          <source src={Sphere} type='video/webm' />
-          <source src={SphereMp4} type='video/mp4' />
+          {browserInfo.includes('Safari') ? (
+            <source src={SphereMp4} type='video/mp4' />
+          ) : (
+            <source src={Sphere} type='video/webm' />
+          )}
         </video>
       </div>
       <Testimonials />
