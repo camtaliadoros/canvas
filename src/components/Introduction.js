@@ -4,7 +4,7 @@ import { Testimonials } from './Testimonials';
 import Sphere from '../assets/Ball-with-Feather.webm';
 import SphereMp4 from '../assets/sphere.mp4';
 
-const browserInfo = navigator.userAgent;
+const browserInfo = navigator?.userAgent;
 
 export const Introduction = () => {
   return (
