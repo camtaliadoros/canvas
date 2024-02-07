@@ -2,7 +2,9 @@ import React from 'react';
 import * as styles from '../styles/introduction.module.css';
 import { Testimonials } from './Testimonials';
 import Sphere from '../assets/Ball-with-Feather.webm';
-// import Sphere from '../assets/sphere.mp4';
+import SphereMp4 from '../assets/sphere.mp4';
+
+const browserInfo = navigator.userAgent;
 
 export const Introduction = () => {
   return (
@@ -19,13 +21,17 @@ export const Introduction = () => {
       <div className={styles.videoContainer}>
         <video
           autoPlay
+          playsInline
           loop
           muted
-          playsInline
           disableRemotePlayback
           className={styles.video}
         >
-          <source src={Sphere} type='video/mp4' />
+          {browserInfo.includes('Safari') ? (
+            <source src={SphereMp4} type='video/mp4' />
+          ) : (
+            <source src={Sphere} type='video/webm' />
+          )}
         </video>
       </div>
       <Testimonials />

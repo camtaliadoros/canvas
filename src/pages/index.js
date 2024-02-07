@@ -8,15 +8,16 @@ import { Founder } from '../components/Founder';
 import { Header } from '../components/Header';
 import { Introduction } from '../components/Introduction';
 import { Nav } from '../components/Nav';
-import { Testimonials } from '../components/Testimonials';
 import '../styles/global.css';
 
 export default function Home() {
+  const browserInfo = navigator.userAgent;
+
   return (
     <>
       <Header />
       <Nav />
-      <main>
+      <main className={browserInfo.includes('Safari') ? 'safari' : ''}>
         <Introduction />
         <About />
         <Expertise />
