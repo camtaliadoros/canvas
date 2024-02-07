@@ -51,6 +51,10 @@ main {
 
   &.safari {
     background-color: #9c9c9c;
+
+    video {
+      clip-path: inset(1px 1px);
+    }
   }
 }
 

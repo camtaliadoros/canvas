@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useEffect, useState } from 'react';
 import { About } from '../components/About';
 import { Contact } from '../components/Contact';
 import { Expertise } from '../components/Expertise';
@@ -11,17 +12,24 @@ import { Nav } from '../components/Nav';
 import '../styles/global.css';
 
 export default function Home() {
-  let browserInfo = [];
+  const [browserClass, setBrowserClass] = useState('');
 
-  React.useMemo(() => {
-    browserInfo = window.navigator.userAgent;
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const browserInfo = window.navigator.userAgent;
+      if (browserInfo.includes('Safari')) {
+        setBrowserClass('safari');
+      } else {
+        setBrowserClass('');
+      }
+    }
   }, []);
 
   return (
     <>
       <Header />
       <Nav />
-      <main className={browserInfo.includes('Safari') ? 'safari' : ''}>
+      <main className={browserClass}>
         <Introduction />
         <About />
         <Expertise />
