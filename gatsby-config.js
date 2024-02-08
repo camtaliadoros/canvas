@@ -14,6 +14,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-preload-fonts`,
+    'gatsby-plugin-webpack-bundle-analyser-v2',
     {
       resolve: 'gatsby-remark-images-grid',
       options: {
@@ -36,22 +37,6 @@ module.exports = {
       },
     },
 
-    {
-      resolve: `gatsby-omni-font-loader`,
-      options: {
-        enableListener: true,
-        preconnect: [
-          `https://fonts.googleapis.com`,
-          `https://fonts.gstatic.com`,
-        ],
-        web: [
-          {
-            name: `Ivy Ora`,
-            file: `https://use.typekit.net/emz5qfb.css`,
-          },
-        ],
-      },
-    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

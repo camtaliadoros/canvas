@@ -26,6 +26,7 @@
     "gatsby-plugin-preload-fonts": "^4.13.1",
     "gatsby-plugin-sass": "^6.13.0",
     "gatsby-plugin-sharp": "^5.13.0",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-remark-images-grid": "^1.2.0",
     "gatsby-remark-line-breaks": "^1.0.0",
     "gatsby-source-filesystem": "^5.13.0",
@@ -43,5 +44,8 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "devDependencies": {
+    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.32"
   }
 }

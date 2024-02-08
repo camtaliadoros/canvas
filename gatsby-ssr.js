@@ -30,5 +30,6 @@ export const onRenderBody = ({ setHeadComponents }) => {
       type='font/woff'
       crossOrigin='anonymous'
     />,
+    <link rel='stylesheet' href='https://use.typekit.net/emz5qfb.css' />,
   ]);
 };

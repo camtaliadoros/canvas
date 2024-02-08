@@ -10,7 +10,7 @@ import { Header } from '../components/Header';
 import { Introduction } from '../components/Introduction';
 import { Nav } from '../components/Nav';
 import '../styles/global.css';
-import { SEO } from '../components/seo';
+import { Seo } from '../components/seo';
 
 export default function Home() {
   const [browserClass, setBrowserClass] = useState('');
@@ -46,6 +46,6 @@ export default function Home() {
   );
 }
 
-export const Head = () => {
-  <SEO />;
-};
+export function Head() {
+  return <Seo />;
+}
