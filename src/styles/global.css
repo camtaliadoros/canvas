@@ -50,8 +50,6 @@ main {
   text-align: center;
 
   &.safari {
-    background-color: #9c9c9c;
-
     video {
       clip-path: inset(1px 1px);
     }
@@ -61,6 +59,10 @@ main {
 @media screen and (min-width: 1024px) {
   main {
     padding: var(--xl-space);
+
+    &.safari {
+      background-color: #9c9c9c;
+    }
   }
 }
 
