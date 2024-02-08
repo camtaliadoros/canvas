@@ -10,6 +10,7 @@ module.exports = {
     siteUrl: `https://canvasphilanthropy.com/`,
     description: `We support inspirational people instigate meaningful and powerful change in the world. Established in 2015, we shape, launch and grow philanthropic and corporate socially responsible initiatives.`,
     copyright: '©Canvas Philanthropy 2024',
+    image: '/canvas-logo-bg.png',
   },
   plugins: [
     `gatsby-plugin-preload-fonts`,
