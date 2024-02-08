@@ -5,21 +5,21 @@ import * as styles from '../styles/introduction.module.css';
 import { Testimonials } from './Testimonials';
 
 export const Introduction = () => {
-  const [videoSrc, setVideoSrc] = useState();
+  // const [videoSrc, setVideoSrc] = useState();
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const isSafari = /^((?!chrome|android).)*safari/i.test(
-        navigator.userAgent
-      );
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //     const isSafari = /^((?!chrome|android).)*safari/i.test(
+  //       navigator.userAgent
+  //     );
 
-      if (isSafari) {
-        setVideoSrc(<source src={SphereMp4} type='video/mp4' />);
-      } else {
-        setVideoSrc(<source src={Sphere} type='video/webm' />);
-      }
-    }
-  }, []);
+  //     if (isSafari) {
+  //       setVideoSrc(<source src={SphereMp4} type='video/mp4' />);
+  //     } else {
+  //       setVideoSrc(<source src={Sphere} type='video/webm' />);
+  //     }
+  //   }
+  // }, []);
 
   return (
     <section className={styles.container} id='introduction'>
@@ -41,7 +41,8 @@ export const Introduction = () => {
           disableRemotePlayback
           className={styles.video}
         >
-          {videoSrc}
+          <source src={Sphere} type='video/webm' />
+          <source src={SphereMp4} type='video/mp4' />
         </video>
       </div>
       <Testimonials />

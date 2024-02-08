@@ -50,6 +50,7 @@ main {
   text-align: center;
 
   &.safari {
+    background-color: var(--medium-grey);
     video {
       clip-path: inset(1px 1px);
     }
