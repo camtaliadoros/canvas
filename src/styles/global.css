@@ -23,6 +23,8 @@
   --desktop-narrow: 440px;
   --desktop-medium: 540px;
   --desktop-wide: 900px;
+
+  color-scheme: light only;
 }
 
 @font-face {
