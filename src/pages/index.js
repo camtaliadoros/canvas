@@ -47,5 +47,9 @@ export default function Home() {
 }
 
 export function Head() {
-  return <Seo />;
+  return;
+  <>
+    <Seo />
+    <meta name='color-scheme' content='light only' />
+  </>;
 }
