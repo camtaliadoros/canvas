@@ -1,7 +1,7 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import React, { useEffect, useState } from 'react';
 import * as styles from '../styles/testimonials.module.css';
 import { TestimonialCard } from './TestimonialCard';
-import { graphql, useStaticQuery } from 'gatsby';
 
 export const Testimonials = () => {
   const data = useStaticQuery(graphql`

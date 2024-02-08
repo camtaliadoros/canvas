@@ -16,8 +16,11 @@ export default function Home() {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const browserInfo = window.navigator.userAgent;
-      if (browserInfo.includes('Safari')) {
+      const isSafari = /^((?!chrome|android).)*safari/i.test(
+        navigator.userAgent
+      );
+
+      if (isSafari) {
         setBrowserClass('safari');
       } else {
         setBrowserClass('');

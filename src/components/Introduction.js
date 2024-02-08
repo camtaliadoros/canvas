@@ -9,8 +9,11 @@ export const Introduction = () => {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const browserInfo = window.navigator.userAgent;
-      if (browserInfo.includes('Safari')) {
+      const isSafari = /^((?!chrome|android).)*safari/i.test(
+        navigator.userAgent
+      );
+
+      if (isSafari) {
         setVideoSrc(<source src={SphereMp4} type='video/mp4' />);
       } else {
         setVideoSrc(<source src={Sphere} type='video/webm' />);
