@@ -30,6 +30,8 @@ let shouldWatchScroll = true;
 export const Nav = () => {
   const [visibleSection, setVisibleSection] = useState('introduction');
   const [loaded, setLoaded] = useState(false);
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+
   const navHeight = 32;
   const halfMarkerHeight = 3;
   const xHeightDelta = 1;
@@ -83,8 +85,23 @@ export const Nav = () => {
     }, 1000);
   };
 
+  const handleMenuClick = () => {
+    setMenuIsOpen((prevState) => {
+      return !prevState;
+    });
+  };
+
   return (
-    <nav className={styles.navContainer}>
+    <nav className={`${styles.navContainer}`}>
+      <div
+        onClick={handleMenuClick}
+        className={`${styles.navIcon} ${menuIsOpen ? styles.open : ''}`}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <ul>
         {navSections.map((section) => {
           return (

@@ -1,27 +1,36 @@
 .navContainer {
-  display: none;
-}
+  display: flex;
+  position: absolute;
+  background-color: var(--medium-grey);
+  width: 100%;
+  height: 100%;
+  padding-top: 90px;
+  right: 100%;
+  transition: right 100ms;
 
-@media screen and (min-width: 1024px) {
-  .navContainer {
+  &.active {
+    right: 0;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    position: fixed;
-    right: 90px;
-    top: 40vh;
-
-    ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-    }
+    align-items: flex-end;
+    width: 100%;
 
     li {
       display: flex;
       align-items: center;
       height: 32px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      width: 100%;
+      padding: 0 var(--xl-space);
+
+      &:nth-of-type(1) {
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+      }
 
       &.active {
         & > a {
@@ -42,6 +51,31 @@
         }
       }
     }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navContainer {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    right: 90px;
+    top: 40vh;
+    padding-top: 0;
+
+    ul {
+      li {
+        border-bottom: none;
+        padding: 0;
+
+        &:nth-of-type(1) {
+          border-top: none;
+        }
+      }
+    }
 
     .sectionMarker {
       width: 6px;
@@ -54,4 +88,81 @@
       transition: top 0.2s;
     }
   }
+}
+
+.navIcon {
+  width: 60px;
+  height: 45px;
+  position: relative;
+  margin: 50px auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+
+  span {
+    display: block;
+    position: absolute;
+    height: 9px;
+    width: 100%;
+    background: var(--white);
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+
+    &:nth-child(1) {
+      top: 0px;
+    }
+
+    &:nth-child(2) {
+      top: 18px;
+    }
+
+    &:nth-child(3) {
+      top: 18px;
+    }
+
+    &:nth-child(4) {
+      top: 36px;
+    }
+  }
+}
+
+.navIcon.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.navIcon.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.navIcon.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.navIcon.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
 }
