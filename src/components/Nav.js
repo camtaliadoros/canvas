@@ -1,5 +1,5 @@
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as styles from '../styles/nav.module.css';
 
 const navSections = [
@@ -76,6 +76,12 @@ export const Nav = () => {
     };
   }, []);
 
+  useEffect(() => {
+    document.querySelector('body').style.overflowY = menuIsOpen
+      ? 'hidden'
+      : 'auto';
+  }, [menuIsOpen]);
+
   const handleAnchorClick = (sectionTitle) => {
     shouldWatchScroll = false;
 
@@ -92,8 +98,8 @@ export const Nav = () => {
   };
 
   return (
-    <nav className={`${styles.navContainer}`}>
-      <div
+    <>
+      <button
         onClick={handleMenuClick}
         className={`${styles.navIcon} ${menuIsOpen ? styles.open : ''}`}
       >
@@ -101,29 +107,36 @@ export const Nav = () => {
         <span></span>
         <span></span>
         <span></span>
-      </div>
-      <ul>
-        {navSections.map((section) => {
-          return (
-            <li
-              className={
-                `#${visibleSection}` === section.id ? styles.active : ''
-              }
-              key={section.id}
-            >
-              <AnchorLink
-                to={`/${section.id}`}
-                onAnchorLinkClick={() => handleAnchorClick(section.title)}
+      </button>
+      <nav
+        className={`${styles.navContainer} ${menuIsOpen ? styles.active : ''}`}
+      >
+        <ul>
+          {navSections.map((section) => {
+            return (
+              <li
+                className={
+                  `#${visibleSection}` === section.id ? styles.active : ''
+                }
+                key={section.id}
               >
-                {section.title}
-              </AnchorLink>
-            </li>
-          );
-        })}
-      </ul>
-      {loaded && (
-        <div className={styles.sectionMarker} style={{ top: markerPosition }} />
-      )}
-    </nav>
+                <AnchorLink
+                  to={`/${section.id}`}
+                  onAnchorLinkClick={() => handleAnchorClick(section.title)}
+                >
+                  {section.title}
+                </AnchorLink>
+              </li>
+            );
+          })}
+        </ul>
+        {loaded && (
+          <div
+            className={styles.sectionMarker}
+            style={{ top: markerPosition }}
+          />
+        )}
+      </nav>
+    </>
   );
 };

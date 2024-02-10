@@ -9,8 +9,8 @@ import { Founder } from '../components/Founder';
 import { Header } from '../components/Header';
 import { Introduction } from '../components/Introduction';
 import { Nav } from '../components/Nav';
-import '../styles/global.css';
 import { Seo } from '../components/seo';
+import '../styles/global.css';
 
 export default function Home() {
   const [browserClass, setBrowserClass] = useState('');

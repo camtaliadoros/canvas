@@ -5,8 +5,8 @@
   width: 100%;
   height: 100%;
   padding-top: 90px;
-  right: 100%;
-  transition: right 100ms;
+  right: -100%;
+  transition: right 300ms;
 
   &.active {
     right: 0;
@@ -23,7 +23,7 @@
     li {
       display: flex;
       align-items: center;
-      height: 32px;
+      height: 44px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.3);
       width: 100%;
       padding: 0 var(--xl-space);
@@ -42,9 +42,10 @@
         text-decoration: none;
         color: var(--white);
         font-family: 'ABC Normal Book';
-        font-size: 12px;
-        line-height: 12px;
+        font-size: 14px;
+        line-height: 14px;
         transition: color 0.2s;
+        width: 100%;
 
         &:hover {
           color: var(--green);
@@ -70,6 +71,12 @@
       li {
         border-bottom: none;
         padding: 0;
+        height: 32px;
+
+        a {
+          font-size: 12px;
+          line-height: 14px;
+        }
 
         &:nth-of-type(1) {
           border-top: none;
@@ -91,10 +98,11 @@
 }
 
 .navIcon {
-  width: 60px;
-  height: 45px;
-  position: relative;
-  margin: 50px auto;
+  width: 35px;
+  height: 20px;
+  position: absolute;
+  top: 35px;
+  right: 30px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -104,11 +112,14 @@
   -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   cursor: pointer;
+  border: none;
+  background-color: transparent;
+  z-index: 1;
 
   span {
     display: block;
     position: absolute;
-    height: 9px;
+    height: 2px;
     width: 100%;
     background: var(--white);
     border-radius: 9px;
@@ -128,15 +139,15 @@
     }
 
     &:nth-child(2) {
-      top: 18px;
+      top: 10px;
     }
 
     &:nth-child(3) {
-      top: 18px;
+      top: 10px;
     }
 
     &:nth-child(4) {
-      top: 36px;
+      top: 20px;
     }
   }
 }
@@ -165,4 +176,10 @@
   top: 18px;
   width: 0%;
   left: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .navIcon {
+    display: none;
+  }
 }
