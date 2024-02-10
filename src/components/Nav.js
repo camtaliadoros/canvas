@@ -86,6 +86,7 @@ export const Nav = () => {
     shouldWatchScroll = false;
 
     setVisibleSection(sectionTitle.toLowerCase());
+    setMenuIsOpen(false);
     setTimeout(() => {
       shouldWatchScroll = true;
     }, 1000);
