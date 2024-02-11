@@ -1,12 +1,13 @@
 .navContainer {
   display: flex;
-  position: absolute;
+  position: fixed;
   background-color: var(--medium-grey);
   width: 100%;
   height: 100%;
-  padding-top: 90px;
+  padding-top: 120px;
   right: -100%;
   transition: right 300ms;
+  z-index: 1;
 
   &.active {
     right: 0;
@@ -188,6 +189,7 @@
   right: 30px;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 
   &.visible {
     background-color: var(--green);
@@ -204,5 +206,9 @@
 @media screen and (min-width: 1024px) {
   .navIconContainer {
     display: none;
+
+    &.visible {
+      display: none;
+    }
   }
 }
