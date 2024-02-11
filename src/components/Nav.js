@@ -31,6 +31,7 @@ export const Nav = () => {
   const [visibleSection, setVisibleSection] = useState('introduction');
   const [loaded, setLoaded] = useState(false);
   const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const [mobileNavIconBg, setMobileNavIconBg] = useState(false);
 
   const navHeight = 32;
   const halfMarkerHeight = 3;
@@ -60,6 +61,12 @@ export const Nav = () => {
             scrollPosition < sectionTop + sectionHeight
           ) {
             setVisibleSection(section.id);
+          }
+
+          if (scrollPosition >= 90) {
+            setMobileNavIconBg(true);
+          } else {
+            setMobileNavIconBg(false);
           }
         });
       }
@@ -100,15 +107,21 @@ export const Nav = () => {
 
   return (
     <>
-      <button
-        onClick={handleMenuClick}
-        className={`${styles.navIcon} ${menuIsOpen ? styles.open : ''}`}
+      <div
+        className={`${styles.navIconContainer} ${
+          mobileNavIconBg ? styles.visible : ''
+        }`}
       >
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+        <button
+          onClick={handleMenuClick}
+          className={`${styles.navIcon} ${menuIsOpen ? styles.open : ''}`}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
       <nav
         className={`${styles.navContainer} ${menuIsOpen ? styles.active : ''}`}
       >

@@ -100,9 +100,6 @@
 .navIcon {
   width: 35px;
   height: 20px;
-  position: absolute;
-  top: 35px;
-  right: 30px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -115,6 +112,7 @@
   border: none;
   background-color: transparent;
   z-index: 1;
+  position: relative;
 
   span {
     display: block;
@@ -178,8 +176,33 @@
   left: 50%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .navIcon {
+    display: none;
+  }
+}
+
+.navIconContainer {
+  position: absolute;
+  top: 35px;
+  right: 30px;
+  justify-content: center;
+  align-items: center;
+
+  &.visible {
+    background-color: var(--green);
+    top: 30px;
+    right: 30px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    position: fixed;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navIconContainer {
     display: none;
   }
 }
