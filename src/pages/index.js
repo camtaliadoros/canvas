@@ -21,8 +21,15 @@ export default function Home() {
         navigator.userAgent
       );
 
-      if (isSafari) {
-        setBrowserClass('safari');
+      const isMobile =
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        );
+
+      if (isSafari && !isMobile) {
+        setBrowserClass('safariLight');
+      } else if (isSafari && isMobile) {
+        setBrowserClass('safariDark');
       } else {
         setBrowserClass('');
       }

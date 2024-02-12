@@ -28,11 +28,15 @@ main {
   align-items: center;
   text-align: center;
 
-  &.safari {
+  &.safariLight {
+    background-color: #9c9c9c;
+  }
+
+  &.safariDark {
     background-color: $medium-grey;
-    video {
-      clip-path: inset(1px 1px);
-    }
+  }
+  video {
+    clip-path: inset(1px 1px);
   }
 }
 
@@ -40,7 +44,7 @@ main {
   main {
     padding: $xl-space;
 
-    &.safari {
+    &.safariLight {
       background-color: #9c9c9c;
     }
   }
