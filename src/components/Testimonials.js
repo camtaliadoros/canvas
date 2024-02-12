@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React, { useEffect, useState } from 'react';
-import * as styles from '../styles/testimonials.module.css';
+import * as styles from '../styles/testimonials.module.scss';
 import { TestimonialCard } from './TestimonialCard';
 
 export const Testimonials = () => {

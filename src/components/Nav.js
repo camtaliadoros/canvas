@@ -1,6 +1,6 @@
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import React, { useEffect, useState } from 'react';
-import * as styles from '../styles/nav.module.css';
+import * as styles from '../styles/nav.module.scss';
 
 const navSections = [
   {

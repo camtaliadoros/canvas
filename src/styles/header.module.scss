@@ -1,3 +1,5 @@
+@import 'variables';
+
 .header {
   display: flex;
   position: absolute;
@@ -34,7 +36,7 @@
 
     & > a {
       font-family: 'ABC Normal Book';
-      color: var(--white);
+      color: $white;
       font-size: 14px;
       text-decoration: none;
       width: 100%;
@@ -49,7 +51,7 @@
   top: 20px;
   width: 70px;
   height: 1px;
-  background-color: var(--white);
+  background-color: $white;
   transform: scaleX(0);
   transform-origin: bottom left;
   transition: transform 0.3s ease-out;

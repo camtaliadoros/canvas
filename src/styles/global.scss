@@ -1,29 +1,6 @@
+@import 'variables';
+
 :root {
-  /* Colours */
-  --light-stone: #e3e1dd;
-  --medium-stone: #c2bcbc;
-  --dark-stone: #514d49;
-  --medium-grey: #929292;
-  --dark-grey: #2b2d30;
-  --white: #fff;
-  --black: #252324;
-  --chalk: #f3f1ea;
-  --green: #b6fde3;
-  --dark-green: #2e3733;
-
-  /* Spacing */
-  --xs-space: 6px;
-  --small-space: 12px;
-  --medium-space: 24px;
-  --large-space: 36px;
-  --xl-space: 42px;
-
-  /* Content Space */
-  --mobile-narrow: 260px;
-  --desktop-narrow: 440px;
-  --desktop-medium: 540px;
-  --desktop-wide: 900px;
-
   color-scheme: light only;
 }
 
@@ -45,14 +22,14 @@
 }
 
 main {
-  background-color: var(--medium-grey);
+  background-color: $medium-grey;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 
   &.safari {
-    background-color: var(--medium-grey);
+    background-color: $medium-grey;
     video {
       clip-path: inset(1px 1px);
     }
@@ -61,7 +38,7 @@ main {
 
 @media screen and (min-width: 1024px) {
   main {
-    padding: var(--xl-space);
+    padding: $xl-space;
 
     &.safari {
       background-color: #9c9c9c;
@@ -74,7 +51,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 var(--medium-space);
+  padding: 0 $medium-space;
 }
 
 @media screen and (min-width: 1024px) {
@@ -86,11 +63,11 @@ section {
 }
 
 .section-description {
-  max-width: var(--desktop-medium);
+  max-width: $desktop-medium;
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 0 var(--small-space);
+  padding: 0 $small-space;
 }
 
 /* Typography */
@@ -100,7 +77,7 @@ h3,
 h4,
 h5,
 p {
-  color: var(--white);
+  color: $white;
 }
 
 h1 {
@@ -109,7 +86,7 @@ h1 {
   letter-spacing: 0.3em;
   text-transform: uppercase;
   font-family: 'ABC Normal Regular';
-  margin-bottom: var(--small-space);
+  margin-bottom: $small-space;
 }
 
 @media screen and (min-width: 1024px) {
@@ -122,7 +99,7 @@ h2 {
   font-family: ivyora-display, sans-serif;
   font-weight: 300;
   font-size: 60px;
-  margin-bottom: var(--medium-space);
+  margin-bottom: $medium-space;
   line-height: 1.2em;
 }
 
@@ -137,7 +114,7 @@ h3 {
   font-weight: 300;
   text-align: left;
   font-size: 28px;
-  color: var(--dark-stone);
+  color: $dark-stone;
   white-space: pre-wrap;
   position: relative;
   top: -6px;
@@ -156,13 +133,13 @@ h4 {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.4em;
-  margin-bottom: var(--medium-space);
-  max-width: var(--mobile-narrow);
+  margin-bottom: $medium-space;
+  max-width: $mobile-narrow;
 }
 
 @media screen and (min-width: 1024px) {
   h4 {
-    max-width: var(--desktop-narrow);
+    max-width: $desktop-narrow;
     font-size: 16px;
   }
 }
@@ -189,14 +166,14 @@ h5 {
 p {
   font-family: 'ABC Normal Book';
   line-height: 1.5em;
-  margin-bottom: var(--xs-space);
+  margin-bottom: $xs-space;
   font-size: 15px;
   white-space: pre-wrap;
 
   &.large {
     font-size: 16px;
     line-height: 1.5em;
-    margin-bottom: var(--medium-space);
+    margin-bottom: $medium-space;
   }
 
   &.copyright {
@@ -228,7 +205,7 @@ a {
     font-size: 24px;
     line-height: 1.5em;
     text-decoration: underline;
-    color: var(--white);
+    color: $white;
 
     &:hover {
       text-decoration: none;
@@ -253,22 +230,22 @@ a {
 }
 
 .centered-text-container {
-  max-width: var(--desktop-narrow);
+  max-width: $desktop-narrow;
   margin: 0 auto;
 }
 
 .white-container-section {
-  background-color: var(--white);
-  padding: 90px var(--xl-space);
+  background-color: $white;
+  padding: 90px $xl-space;
   width: 100vw;
 
   & > h2 {
-    margin-bottom: var(--xl-space);
+    margin-bottom: $xl-space;
   }
 
   & > p {
-    margin-bottom: var(--medium-space);
-    max-width: var(--desktop-narrow);
+    margin-bottom: $medium-space;
+    max-width: $desktop-narrow;
   }
 
   & > h1,
@@ -277,7 +254,7 @@ a {
   h4,
   h5,
   p {
-    color: var(--black);
+    color: $black;
   }
 }
 
@@ -289,7 +266,7 @@ a {
 }
 
 .signature-container {
-  margin-top: var(--medium-space);
+  margin-top: $medium-space;
   & > p {
     margin-bottom: 0;
     line-height: 1.2;
@@ -300,7 +277,7 @@ a {
 footer {
   background-color: #000;
   display: flex;
-  padding: var(--medium-space);
+  padding: $medium-space;
   justify-content: space-between;
   align-items: center;
 
@@ -318,7 +295,7 @@ footer {
 
 @media screen and (min-width: 1024px) {
   footer {
-    padding: var(--large-space) 90px;
+    padding: $large-space 90px;
 
     & .footer-logo {
       width: 60px;
@@ -335,5 +312,5 @@ footer {
 }
 
 .founder-img {
-  margin-bottom: var(--medium-space);
+  margin-bottom: $medium-space;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
-import * as styles from '../styles/404.module.css';
+import * as styles from '../styles/404.module.scss';
 import { Link } from 'gatsby';
 
 export default function notFound() {

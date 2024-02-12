@@ -14,9 +14,6 @@
     "preload-fonts": "gatsby-preload-fonts"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.5.1",
-    "@fortawesome/free-solid-svg-icons": "^6.5.1",
-    "@fortawesome/react-fontawesome": "^0.2.0",
     "gatsby": "^5.13.1",
     "gatsby-cli": "^5.13.1",
     "gatsby-omni-font-loader": "^2.0.2",
@@ -27,7 +24,6 @@
     "gatsby-plugin-sass": "^6.13.0",
     "gatsby-plugin-sharp": "^5.13.0",
     "gatsby-plugin-web-font-loader": "^1.0.4",
-    "gatsby-remark-images-grid": "^1.2.0",
     "gatsby-remark-line-breaks": "^1.0.0",
     "gatsby-source-filesystem": "^5.13.0",
     "gatsby-transformer-remark": "^6.13.0",

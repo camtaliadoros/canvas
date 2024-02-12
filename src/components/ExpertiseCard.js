@@ -1,6 +1,6 @@
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
-import * as styles from '../styles/expertise.module.css';
+import * as styles from '../styles/expertise.module.scss';
 
 export const ExpertiseCard = ({ content }) => {
   const { title, description, iconPath, position } = content.frontmatter;

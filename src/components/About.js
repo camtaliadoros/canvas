@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { ClientLogos } from './ClientLogos';
-import * as styles from '../styles/about.module.css';
+import * as styles from '../styles/about.module.scss';
 
 const sortedLogos = [
   'housing-justice',

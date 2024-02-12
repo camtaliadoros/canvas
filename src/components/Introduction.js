@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Sphere from '../assets/Ball-with-Feather.webm';
 import SphereMp4 from '../assets/sphere.mp4';
-import * as styles from '../styles/introduction.module.css';
+import * as styles from '../styles/introduction.module.scss';
 import { Testimonials } from './Testimonials';
 
 export const Introduction = () => {

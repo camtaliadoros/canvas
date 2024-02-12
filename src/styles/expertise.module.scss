@@ -1,29 +1,31 @@
+@import 'variables';
+
 .expertiseCardsContainer {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--large-space) 0;
-  margin-top: var(--xl-space);
+  gap: $large-space 0;
+  margin-top: $xl-space;
 }
 
 @media screen and (min-width: 1024px) {
   .expertiseCardsContainer {
     grid-template: 1fr 1fr 1fr / 1fr 1fr;
-    gap: var(--xl-space);
+    gap: $xl-space;
   }
 }
 
 .expertiseCard {
-  background-color: var(--light-stone);
+  background-color: $light-stone;
   border-radius: 3px;
   display: flex;
   flex-direction: column;
-  padding: var(--large-space);
+  padding: $large-space;
   align-items: start;
   justify-items: start;
-  gap: var(--small-space) 0;
+  gap: $small-space 0;
 
   & p {
-    color: var(--black);
+    color: $black;
     text-align: left;
     display: inline-block;
   }
@@ -33,15 +35,15 @@
   .expertiseCard {
     display: grid;
     grid-template: 1fr 3fr / 1fr 2fr;
-    padding: var(--large-space);
+    padding: $large-space;
     align-items: start;
     justify-items: start;
   }
 }
 
 .expertiseIndex {
-  border-bottom: 1px solid var(--black);
-  margin-bottom: var(--medium-space);
+  border-bottom: 1px solid $black;
+  margin-bottom: $medium-space;
 }
 
 @media screen and (min-width: 1024px) {
@@ -52,8 +54,8 @@
 
 .expertiseIcon {
   max-width: 90px;
-  margin-bottom: var(--medium-space);
-  margin-right: var(--small-space);
+  margin-bottom: $medium-space;
+  margin-right: $small-space;
 }
 
 @media screen and (min-width: 1024px) {

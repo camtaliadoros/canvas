@@ -10,7 +10,7 @@ import { Header } from '../components/Header';
 import { Introduction } from '../components/Introduction';
 import { Nav } from '../components/Nav';
 import { Seo } from '../components/seo';
-import '../styles/global.css';
+import '../styles/global.scss';
 
 export default function Home() {
   const [browserClass, setBrowserClass] = useState('');

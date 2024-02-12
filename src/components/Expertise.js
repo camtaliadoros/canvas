@@ -1,7 +1,7 @@
 import React from 'react';
 import { ExpertiseCard } from './ExpertiseCard';
 import { graphql, useStaticQuery } from 'gatsby';
-import * as styles from '../styles/expertise.module.css';
+import * as styles from '../styles/expertise.module.scss';
 
 export const Expertise = () => {
   const data = useStaticQuery(graphql`

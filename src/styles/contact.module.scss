@@ -1,12 +1,14 @@
+@import 'variables';
+
 .contactContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 0;
-  padding: 72px var(--xl-space);
+  padding: 72px $xl-space;
   width: 100%;
-  background-color: var(--dark-grey);
+  background-color: $dark-grey;
 
   & h5 {
     text-align: center;

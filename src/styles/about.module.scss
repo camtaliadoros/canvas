@@ -1,18 +1,20 @@
+@import 'variables';
+
 .logosContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 60px var(--small-space);
+  gap: 60px $small-space;
   place-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-top: var(--large-space);
+  margin-top: $large-space;
 }
 
 @media screen and (min-width: 1024px) {
   .logosContainer {
     grid-template-columns: repeat(5, 1fr);
-    width: var(--desktop-medium);
-    gap: 72px var(--large-space);
+    width: $desktop-medium;
+    gap: 72px $large-space;
   }
 }
 

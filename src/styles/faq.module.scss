@@ -1,3 +1,5 @@
+@import 'variables';
+
 .container {
   width: 100%;
   position: relative;
@@ -10,13 +12,13 @@
   text-align: left;
   transition: grid-template-rows 0.5s, padding 0.1s;
   border: none;
-  padding: 0 var(--medium-space);
+  padding: 0 $medium-space;
   margin: 0;
 
   &.openAnswer {
     grid-template-rows: 1fr;
-    padding: var(--medium-space);
-    padding-bottom: var(--xl-space);
+    padding: $medium-space;
+    padding-bottom: $xl-space;
   }
 
   & p {
@@ -24,21 +26,21 @@
     margin: 0;
 
     /* &:first-of-type {
-      padding-top: var(--medium-space);
+      padding-top: $medium-space;
     } */
 
     /* &:last-of-type {
-      padding-bottom: var(--medium-space);
+      padding-bottom: $medium-space;
     } */
   }
 }
 
-.questionContainer {
+button.questionContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
-  padding: var(--small-space) 8px;
+  padding: $small-space 8px;
   background-color: transparent;
   border-top: none;
   border-right: none;
@@ -56,17 +58,9 @@
   }
 }
 
-/* @media screen and (min-width: 1024px) {
-  .questionContainer {
-    & p {
-      max-width: none;
-    }
-  }
-} */
-
 .chevron {
-  border-bottom: 1px solid var(--white);
-  border-left: 1px solid var(--white);
+  border-bottom: 1px solid $white;
+  border-left: 1px solid $white;
   height: 12px;
   width: 12px;
   transform: rotate(-45deg);

@@ -13,16 +13,9 @@ module.exports = {
     image: '/canvas-logo-bg.png',
   },
   plugins: [
+    `gatsby-plugin-sass`,
     `gatsby-plugin-preload-fonts`,
     'gatsby-plugin-webpack-bundle-analyser-v2',
-    {
-      resolve: 'gatsby-remark-images-grid',
-      options: {
-        className: 'myCustomClassName',
-        gridGap: '20px',
-        margin: '20px auto',
-      },
-    },
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-anchor-links`,

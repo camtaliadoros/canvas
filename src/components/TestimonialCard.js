@@ -1,5 +1,5 @@
 import React from 'react';
-import * as styles from '../styles/testimonials.module.css';
+import * as styles from '../styles/testimonials.module.scss';
 
 export const TestimonialCard = ({ content }) => {
   const { logoPath, blurb, title, company } = content.frontmatter;
