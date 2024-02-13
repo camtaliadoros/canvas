@@ -31,6 +31,13 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  .expertiseCard {
+    display: grid;
+    grid-template-rows: 60px 120px 120px 1fr;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .expertiseCard {
     display: grid;
