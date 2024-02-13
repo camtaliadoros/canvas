@@ -51,9 +51,11 @@
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: $xl-space;
+  max-width: none;
 
   & > p {
     text-align: left;
+    max-width: none;
   }
 }
 
