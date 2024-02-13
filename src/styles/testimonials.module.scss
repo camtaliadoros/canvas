@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
 
   div.cardContainer {
     &:nth-of-type(1) {
@@ -49,16 +50,25 @@
   background-color: $medium-grey;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 769px) {
   .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: stretch;
+    margin-right: $medium-space;
+
+    &:nth-of-type(3) {
+      margin-right: 0;
+    }
+
+    .cardContainer {
+      width: auto;
+    }
   }
 }
 
 .cardContainer {
-  max-width: 360px;
+  width: 100%;
   padding: $large-space;
   border-radius: 14px;
   display: flex;
@@ -68,7 +78,6 @@
 
   & > p {
     text-align: left;
-    max-width: $desktop-narrow;
   }
 }
 
@@ -87,10 +96,17 @@
 @media screen and (min-width: 1024px) {
   .cardContainer {
     margin-bottom: 0;
-    margin-right: $medium-space;
+    margin-right: $small-space;
+    max-width: 360px;
+    width: auto;
 
     &:nth-of-type(3) {
       margin-right: 0;
+    }
+
+    & > p {
+      max-width: $desktop-narrow;
+      font-size: 11px;
     }
   }
 
@@ -102,7 +118,7 @@
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1023px) {
   .cardContainer {
     padding: $medium-space;
     margin-bottom: 0;
@@ -110,10 +126,6 @@
 
     &:nth-of-type(3) {
       margin-right: 0;
-    }
-
-    & > p {
-      font-size: 11px;
     }
   }
 }
@@ -134,4 +146,14 @@
   line-height: 1.2em;
   margin-bottom: 0;
   font-family: 'ABC Normal Regular';
+}
+
+@media screen and (min-width: 1200px) {
+  .cardContainer {
+    margin-right: $medium-space;
+
+    & > p {
+      font-size: 12px;
+    }
+  }
 }
