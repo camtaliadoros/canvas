@@ -59,6 +59,7 @@
 
 .expertiseIcon {
   max-width: 90px;
+  margin-top: $medium-space;
   margin-bottom: $medium-space;
 }
 
@@ -67,5 +68,6 @@
     width: 78px;
     margin-bottom: 0;
     margin-right: $small-space;
+    margin-top: 0;
   }
 }
