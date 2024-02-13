@@ -34,14 +34,12 @@
 @media screen and (min-width: 768px) {
   .expertiseCard {
     display: grid;
-    grid-template-rows: 60px 120px 120px 1fr;
+    grid-template: 1fr 2fr / 1fr 2fr;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .expertiseCard {
-    display: grid;
-    grid-template: 1fr 3fr / 1fr 2fr;
     padding: $large-space;
     align-items: start;
     justify-items: start;
