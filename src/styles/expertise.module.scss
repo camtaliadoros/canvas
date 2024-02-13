@@ -60,12 +60,12 @@
 .expertiseIcon {
   max-width: 90px;
   margin-bottom: $medium-space;
-  margin-right: $small-space;
 }
 
 @media screen and (min-width: 1024px) {
   .expertiseIcon {
     width: 78px;
     margin-bottom: 0;
+    margin-right: $small-space;
   }
 }
