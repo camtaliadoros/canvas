@@ -43,30 +43,6 @@
   }
 }
 
-.circle {
-  width: 1.6em;
-  height: 1.6em;
-  border-radius: 50%;
-  background-color: $medium-grey;
-}
-
-@media screen and (min-width: 769px) {
-  .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: stretch;
-    margin-right: $medium-space;
-
-    &:nth-of-type(3) {
-      margin-right: 0;
-    }
-
-    .cardContainer {
-      width: auto;
-    }
-  }
-}
-
 .cardContainer {
   width: 100%;
   padding: $large-space;
@@ -90,6 +66,30 @@
   & > img {
     height: 54px;
     max-width: 120px;
+  }
+}
+
+.circle {
+  width: 1.6em;
+  height: 1.6em;
+  border-radius: 50%;
+  background-color: $medium-grey;
+}
+
+@media screen and (min-width: 769px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+    margin-right: $medium-space;
+
+    &:nth-of-type(3) {
+      margin-right: 0;
+    }
+
+    .cardContainer {
+      width: auto;
+    }
   }
 }
 
