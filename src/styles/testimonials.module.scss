@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: $xl-space;
+  // gap: $xl-space;
 
   div.cardContainer {
     &:nth-of-type(1) {
@@ -29,6 +29,7 @@
     }
     &:nth-of-type(3) {
       background-color: $chalk;
+      margin-bottom: 0;
 
       & .logoContainer > img {
         filter: invert(27%) sepia(1%) saturate(2632%) hue-rotate(357deg)
@@ -65,6 +66,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-bottom: $xl-space;
 
   & > p {
     text-align: left;
@@ -85,6 +87,15 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .cardContainer {
+    margin-bottom: 0;
+    margin-right: $medium-space;
+
+    &:nth-of-type(3) {
+      margin-right: 0;
+    }
+  }
+
   .logoContainer {
     height: 54px;
     & > img {
