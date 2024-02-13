@@ -22,6 +22,7 @@
   .logosContainer {
     grid-template-columns: repeat(4, 1fr);
     width: $desktop-narrow;
+    gap: 60px $xl-space;
   }
 }
 
