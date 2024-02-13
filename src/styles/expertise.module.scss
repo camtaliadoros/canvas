@@ -7,7 +7,7 @@
   margin-top: $xl-space;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .expertiseCardsContainer {
     grid-template: 1fr 1fr 1fr / 1fr 1fr;
     gap: $xl-space;
