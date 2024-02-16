@@ -27,7 +27,7 @@ export const Introduction = () => {
       <h2>A Space to Change</h2>
       <div className='section-description'>
         <p className='large'>
-          We support inspirational people instigate meaningful and powerful
+          We support inspirational people to instigate meaningful and powerful
           change in the world. Established in 2015, we shape, launch and grow
           philanthropic and corporate socially responsible initiatives.
         </p>

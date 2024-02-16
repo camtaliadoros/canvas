@@ -36,10 +36,10 @@ export const Expertise = () => {
       <h2>A Space to Grow</h2>
       <div className='section-description'>
         <p className='large'>
-          Our principle offering is through management of philanthropic and
+          Our principal offering is through the management of philanthropic and
           socially responsible initiatives. However, we offer a menu of services
-          for those partners who have a particular requirement in their
-          non-profit operation.
+          for our partners who have particular requirements in their non-profit
+          operations
         </p>
       </div>
       <div className={styles.expertiseCardsContainer}>
