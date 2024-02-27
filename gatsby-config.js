@@ -1,6 +1,11 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+
 module.exports = {
   flags: {
     DEV_SSR: true,
@@ -13,6 +18,14 @@ module.exports = {
     image: '/canvas-logo-bg.png',
   },
   plugins: [
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `qd9yk7t53ua5`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
     `gatsby-plugin-sass`,
     `gatsby-plugin-preload-fonts`,
     'gatsby-plugin-webpack-bundle-analyser-v2',
