@@ -73,13 +73,17 @@ section {
 }
 
 .section-description {
-  max-width: 60%;
   width: 100%;
   display: flex;
   flex-direction: column;
   padding: 0 $small-space;
 }
 
+@media screen and (min-width: 1024px) {
+  .section-description {
+    max-width: 60%;
+  }
+}
 /* Typography */
 h1,
 h2,
@@ -103,6 +107,7 @@ h1 {
 @media screen and (min-width: 1024px) {
   h1 {
     font-size: clamp(10px, 0.7vw, 24px);
+    margin-bottom: 1.2vw;
   }
 }
 
@@ -117,6 +122,7 @@ h2 {
 @media screen and (min-width: 1024px) {
   h2 {
     font-size: clamp(66px, 4.2vw, 120px);
+    margin-bottom: 3.2vw;
   }
 }
 
@@ -134,7 +140,7 @@ h3 {
 
 @media screen and (min-width: 1024px) {
   h3 {
-    font-size: 22px;
+    font-size: clamp(22px, 1.4vw, 38px);
     line-height: 28px;
   }
 }
@@ -157,15 +163,8 @@ h4 {
 
 @media screen and (min-width: 1024px) {
   h4 {
-    max-width: $desktop-narrow;
-    font-size: 16px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  h4 {
-    font-size: 20px;
-    max-width: $desktop-medium;
+    font-size: clamp(16px, 1.1vw, 30px);
+    margin-bottom: 1.6vw;
   }
 }
 
@@ -178,19 +177,13 @@ h5 {
 
 @media screen and (min-width: 1024px) {
   h5 {
-    font-size: 22px;
+    font-size: clamp(22px, 1.4vw, 36px);
   }
 }
 
 @media screen and (max-width: 320px) {
   h5 {
     font-size: 20px;
-  }
-}
-
-@media screen and (min-width: 1800px) {
-  h5 {
-    font-size: 28px;
   }
 }
 
@@ -214,7 +207,8 @@ p {
 
 @media screen and (min-width: 1024px) {
   p {
-    font-size: clamp(16px, 1.1vw, 30px);
+    font-size: clamp(12px, 0.9vw, 24px);
+    margin-bottom: 1.6vw;
 
     &.large {
       font-size: clamp(16px, 1.1vw, 30px);
@@ -263,15 +257,7 @@ a {
 @media screen and (min-width: 1024px) {
   a {
     &.email {
-      font-size: 22px;
-    }
-  }
-}
-
-@media screen and (min-width: 1800px) {
-  a {
-    &.email {
-      font-size: 28px;
+      font-size: clamp(22px, 1.4vw, 36px);
     }
   }
 }
@@ -286,12 +272,7 @@ a {
   padding: 90px $xl-space;
   width: 100vw;
 
-  & > h2 {
-    margin-bottom: $xl-space;
-  }
-
   & > p {
-    margin-bottom: $medium-space;
     max-width: $desktop-narrow;
   }
 
@@ -307,13 +288,26 @@ a {
 
 @media screen and (min-width: 1024px) {
   .white-container-section {
-    padding: 120px 0;
+    padding: clamp(120px, 8vw, 240px);
     width: 66%;
+
+    & > h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p {
+      max-width: 70%;
+    }
   }
 }
 
 .signature-container {
   margin-top: $medium-space;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   & > p {
     margin-bottom: 0;
     line-height: 1.2;
@@ -349,7 +343,17 @@ footer {
     }
 
     & > p {
-      font-size: 9px;
+      font-size: clamp(9px, 0.6vw, 14px);
+    }
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  footer {
+    padding: 48px 120px;
+
+    & .footer-logo {
+      width: 90px;
     }
   }
 }
@@ -360,4 +364,11 @@ footer {
 
 .founder-img {
   margin-bottom: $medium-space;
+  width: 120px;
+}
+
+@media screen and (min-width: 1024px) {
+  .founder-img {
+    width: 8.4vw;
+  }
 }

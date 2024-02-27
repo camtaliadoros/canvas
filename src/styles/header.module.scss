@@ -72,3 +72,19 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+@media screen and (min-width: 1800px) {
+  .contactLinkContainer {
+    right: 120px;
+    top: 120px;
+
+    & > a {
+      font-size: 20px;
+    }
+  }
+
+  .contactLinkContainer::after {
+    top: 30px;
+    width: 96px;
+  }
+}

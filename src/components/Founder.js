@@ -9,7 +9,6 @@ export const Founder = () => {
         loading='lazy'
         placeholder='blurred'
         alt='canvas founder Alex Taliadoros'
-        width={120}
         className='founder-img'
       />
       <h1>FOUNDER</h1>
