@@ -29,6 +29,6 @@
   }
 
   .video {
-    width: 630px;
+    width: clamp(630px, 42vw, 1600px);
   }
 }

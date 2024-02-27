@@ -23,6 +23,17 @@
   }
 }
 
+@media screen and (min-width: 1800px) {
+  .header {
+    top: 120px;
+    left: 120px;
+
+    & .logo {
+      width: 90px;
+    }
+  }
+}
+
 .contactLinkContainer {
   display: none;
 }

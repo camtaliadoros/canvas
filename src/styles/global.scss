@@ -50,6 +50,12 @@ main {
   }
 }
 
+@media screen and (min-width: 1800px) {
+  main {
+    padding: $xxl-space;
+  }
+}
+
 section {
   margin-bottom: 150px;
   display: flex;
@@ -67,7 +73,7 @@ section {
 }
 
 .section-description {
-  max-width: $desktop-medium;
+  max-width: 60%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -86,7 +92,7 @@ p {
 
 h1 {
   font-size: 12px;
-  line-height: 24px;
+  line-height: 2em;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   font-family: 'ABC Normal Regular';
@@ -96,7 +102,7 @@ h1 {
 
 @media screen and (min-width: 1024px) {
   h1 {
-    font-size: 10px;
+    font-size: clamp(10px, 0.7vw, 24px);
   }
 }
 
@@ -110,7 +116,7 @@ h2 {
 
 @media screen and (min-width: 1024px) {
   h2 {
-    font-size: 66px;
+    font-size: clamp(66px, 4.2vw, 120px);
   }
 }
 
@@ -133,6 +139,13 @@ h3 {
   }
 }
 
+@media screen and (min-width: 1800px) {
+  h3 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
 h4 {
   font-family: ivyora-display, sans-serif;
   font-weight: 400;
@@ -146,6 +159,13 @@ h4 {
   h4 {
     max-width: $desktop-narrow;
     font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  h4 {
+    font-size: 20px;
+    max-width: $desktop-medium;
   }
 }
 
@@ -165,6 +185,12 @@ h5 {
 @media screen and (max-width: 320px) {
   h5 {
     font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  h5 {
+    font-size: 28px;
   }
 }
 
@@ -188,10 +214,18 @@ p {
 
 @media screen and (min-width: 1024px) {
   p {
-    font-size: 12px;
+    font-size: clamp(16px, 1.1vw, 30px);
 
     &.large {
-      font-size: 16px;
+      font-size: clamp(16px, 1.1vw, 30px);
+    }
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  p {
+    &.large {
+      margin-bottom: $xxl-space;
     }
   }
 }
@@ -230,6 +264,14 @@ a {
   a {
     &.email {
       font-size: 22px;
+    }
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  a {
+    &.email {
+      font-size: 28px;
     }
   }
 }
