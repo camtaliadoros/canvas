@@ -63,9 +63,9 @@
   margin-bottom: $medium-space;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .expertiseIcon {
-    max-width: 5vw;
+    max-width: clamp(90px, 6vw, 180px);
     margin-bottom: 0;
     margin-right: $small-space;
     margin-top: 0;

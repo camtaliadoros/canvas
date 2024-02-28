@@ -79,7 +79,7 @@ section {
   padding: 0 $small-space;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .section-description {
     max-width: 60%;
   }
@@ -297,7 +297,7 @@ a {
     h4,
     h5,
     p {
-      max-width: 70%;
+      max-width: clamp(440px, 70%, 840px);
     }
   }
 }
