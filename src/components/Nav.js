@@ -35,13 +35,22 @@ export const Nav = () => {
   const [largeScreen, setLargeScreen] = useState(false);
 
   useEffect(() => {
-    const screenWidth = window.innerWidth;
-    if (screenWidth > 1800) {
-      setLargeScreen(true);
-    } else {
-      setLargeScreen(false);
+    if (typeof window !== 'undefined') {
+      const handleResize = () => {
+        const screenWidth = window?.innerWidth;
+        if (screenWidth > 1800) {
+          setLargeScreen(true);
+        } else {
+          setLargeScreen(false);
+        }
+      };
+
+      window.addEventListener('resize', handleResize);
+      handleResize();
+
+      return () => window.removeEventListener('resize', handleResize);
     }
-  }, [window.innerWidth]);
+  }, []);
 
   const navHeight = largeScreen ? 48 : 32;
   const halfMarkerHeight = largeScreen ? 5 : 3;
@@ -49,6 +58,8 @@ export const Nav = () => {
   const activeSectionIndex = navSections.findIndex((section) => {
     return section.title.toLowerCase() === visibleSection;
   });
+
+  console.log('navHeight: ' + navHeight);
 
   const markerPosition =
     activeSectionIndex * navHeight +
