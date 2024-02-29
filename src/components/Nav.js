@@ -32,9 +32,19 @@ export const Nav = () => {
   const [loaded, setLoaded] = useState(false);
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [mobileNavIconBg, setMobileNavIconBg] = useState(false);
+  const [largeScreen, setLargeScreen] = useState(false);
 
-  const navHeight = 32;
-  const halfMarkerHeight = 3;
+  useEffect(() => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth > 1800) {
+      setLargeScreen(true);
+    } else {
+      setLargeScreen(false);
+    }
+  }, [window.innerWidth]);
+
+  const navHeight = largeScreen ? 48 : 32;
+  const halfMarkerHeight = largeScreen ? 5 : 3;
   const xHeightDelta = 1;
   const activeSectionIndex = navSections.findIndex((section) => {
     return section.title.toLowerCase() === visibleSection;

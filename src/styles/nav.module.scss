@@ -100,6 +100,29 @@
   }
 }
 
+@media screen and (min-width: 1800px) {
+  .navContainer {
+    right: 120px;
+
+    ul {
+      li {
+        height: 48px;
+
+        a {
+          font-size: 18px;
+          line-height: 1.2em;
+        }
+      }
+    }
+
+    .sectionMarker {
+      width: 10px;
+      height: 10px;
+      right: -18px;
+    }
+  }
+}
+
 .navIcon {
   width: 35px;
   height: 20px;
