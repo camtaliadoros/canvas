@@ -59,8 +59,6 @@ export const Nav = () => {
     return section.title.toLowerCase() === visibleSection;
   });
 
-  console.log('navHeight: ' + navHeight);
-
   const markerPosition =
     activeSectionIndex * navHeight +
     navHeight / 2 -
