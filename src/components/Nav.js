@@ -53,7 +53,7 @@ export const Nav = () => {
   }, []);
 
   const navHeight = largeScreen ? 48 : 32;
-  const halfMarkerHeight = largeScreen ? 5 : 3;
+  const halfMarkerHeight = largeScreen ? 4 : 3;
   const xHeightDelta = 1;
   const activeSectionIndex = navSections.findIndex((section) => {
     return section.title.toLowerCase() === visibleSection;
