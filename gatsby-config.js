@@ -13,6 +13,18 @@ module.exports = {
     image: '/canvas-logo-bg.png',
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ['G-RLM2PKNMXL'],
+        gtagConfig: {
+          anonymize_ip: true,
+        },
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
     `gatsby-plugin-sass`,
     `gatsby-plugin-preload-fonts`,
     'gatsby-plugin-webpack-bundle-analyser-v2',
