@@ -123,6 +123,28 @@
   }
 }
 
+@media screen and (min-width: 2400px) {
+  .navContainer {
+    right: 180px;
+
+    ul {
+      li {
+        height: 60px;
+
+        a {
+          font-size: 24px;
+        }
+      }
+    }
+
+    .sectionMarker {
+      width: 10px;
+      height: 10px;
+      right: -24px;
+    }
+  }
+}
+
 .navIcon {
   width: 35px;
   height: 20px;
