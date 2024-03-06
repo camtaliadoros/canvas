@@ -32,16 +32,18 @@ export const Nav = () => {
   const [loaded, setLoaded] = useState(false);
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [mobileNavIconBg, setMobileNavIconBg] = useState(false);
-  const [largeScreen, setLargeScreen] = useState(false);
+  const [screenSize, setScreenSize] = useState('');
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const handleResize = () => {
         const screenWidth = window?.innerWidth;
-        if (screenWidth > 1800) {
-          setLargeScreen(true);
+        if (screenWidth >= 2400) {
+          setScreenSize('xlarge');
+        } else if (screenWidth >= 1800) {
+          setScreenSize('large');
         } else {
-          setLargeScreen(false);
+          setScreenSize('medium');
         }
       };
 
@@ -52,8 +54,11 @@ export const Nav = () => {
     }
   }, []);
 
-  const navHeight = largeScreen ? 48 : 32;
-  const halfMarkerHeight = largeScreen ? 4 : 3;
+  const navHeight =
+    screenSize === 'xlarge' ? 60 : screenSize === 'large' ? 48 : 32;
+  const halfMarkerHeight =
+    screenSize === 'xlarge' ? 5 : screenSize === 'large' ? 4 : 3;
+
   const xHeightDelta = 1;
   const activeSectionIndex = navSections.findIndex((section) => {
     return section.title.toLowerCase() === visibleSection;
