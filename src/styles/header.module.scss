@@ -34,6 +34,17 @@
   }
 }
 
+@media screen and (min-width: 2400px) {
+  .header {
+    top: 180px;
+    left: 180px;
+
+    & .logo {
+      width: 120px;
+    }
+  }
+}
+
 .contactLinkContainer {
   display: none;
 }
@@ -86,5 +97,22 @@
   .contactLinkContainer::after {
     top: 30px;
     width: 96px;
+  }
+}
+
+@media screen and (min-width: 2400px) {
+  .contactLinkContainer {
+    right: 180px;
+    top: 180px;
+
+    & > a {
+      font-size: 24px;
+    }
+  }
+
+  .contactLinkContainer::after {
+    top: 36px;
+    width: 118px;
+    height: 1.5px;
   }
 }
