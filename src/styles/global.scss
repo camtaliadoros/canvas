@@ -315,6 +315,11 @@ a {
   }
 }
 
+.signature {
+  margin-top: $medium-space;
+  width: clamp(90px, 6vw, 280px);
+}
+
 footer {
   background-color: #000;
   display: flex;

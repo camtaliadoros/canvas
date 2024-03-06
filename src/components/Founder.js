@@ -36,7 +36,7 @@ export const Founder = () => {
         alt='alex signature'
         loading='lazy'
         placeholder='blurred'
-        width={90}
+        className='signature'
       />
       <div className='signature-container'>
         <p>Alexandra Taliadoros</p>
