@@ -355,6 +355,16 @@ footer {
   }
 }
 
+@media screen and (min-width: 2400px) {
+  footer {
+    padding: 60px 180px;
+
+    & .footer-logo {
+      width: 120px;
+    }
+  }
+}
+
 .footer-logo {
   opacity: 0.5;
 }
