@@ -26,18 +26,17 @@ export const Expertise = () => {
           id
         }
       }
-
       allContentfulSection(filter: { name: { eq: "EXPERTISE" } }) {
         nodes {
           title
           name
           heading
+          id
           childContentfulSectionDescriptionTextNode {
             description
           }
-          id
-          childContentfulSectionTextTextNode {
-            text
+          childContentfulSectionBodyTextNode {
+            body
           }
         }
       }
@@ -49,7 +48,7 @@ export const Expertise = () => {
 
   return (
     <section id='expertise'>
-      <SectionTitle content={content} />
+      <SectionTitle sectionContent={content} />
       <div className={styles.expertiseCardsContainer}>
         {expertiseCardsContent.map((content) => {
           return <ExpertiseCard content={content} key={content.id} />;

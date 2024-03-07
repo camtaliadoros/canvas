@@ -1,12 +1,11 @@
 import React from 'react';
 
-export const SectionTitle = ({ content }) => {
-  const { name, title, heading } = content;
+export const SectionTitle = ({ sectionContent }) => {
+  const { name, title, heading } = sectionContent;
 
   const description =
-    content.childContentfulSectionDescriptionTextNode?.description;
-
-  const text = content.childContentfulSectionTextTextNode?.text;
+    sectionContent.childContentfulSectionDescriptionTextNode?.description;
+  const body = sectionContent.childContentfulSectionBodyTextNode?.body;
 
   return (
     <>
@@ -19,7 +18,7 @@ export const SectionTitle = ({ content }) => {
       )}
 
       {heading && <h4 className='dark'>{heading}</h4>}
-      {text && <p className='dark'>{text}</p>}
+      {body && <p className='dark'>{body}</p>}
     </>
   );
 };

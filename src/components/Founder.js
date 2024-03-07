@@ -1,20 +1,23 @@
+import { graphql, useStaticQuery } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { SectionTitle } from './SectionTitle';
-import { graphql, useStaticQuery } from 'gatsby';
 
 export const Founder = () => {
   const data = useStaticQuery(graphql`
-    query IntroductionContent {
-      allContentfulSection(filter: { name: { eq: "FOUNDER" } }) {
+    query FounderContent {
+      allContentfulSection(filter: { name: { eq: "ABOUT" } }) {
         nodes {
           title
           name
           heading
+          id
           childContentfulSectionDescriptionTextNode {
             description
           }
-          id
+          childContentfulSectionBodyTextNode {
+            body
+          }
         }
       }
     }
@@ -32,7 +35,7 @@ export const Founder = () => {
         width={120}
         className='founder-img'
       />
-      <SectionTitle content={content} />
+      <SectionTitle sectionContent={content} />
       <StaticImage
         src='../assets/alex-signature.png'
         alt='alex signature'

@@ -45,12 +45,12 @@ export const About = () => {
           title
           name
           heading
+          id
           childContentfulSectionDescriptionTextNode {
             description
           }
-          id
-          childContentfulSectionTextTextNode {
-            text
+          childContentfulSectionBodyTextNode {
+            body
           }
         }
       }
@@ -66,7 +66,7 @@ export const About = () => {
 
   return (
     <section className='white-container-section' id='about'>
-      <SectionTitle content={content} />
+      <SectionTitle sectionContent={content} />
 
       <div className={styles.logosContainer}>
         {logos.map((logo, i) => (

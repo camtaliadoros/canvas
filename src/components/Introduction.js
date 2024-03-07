@@ -16,10 +16,13 @@ export const Introduction = () => {
           title
           name
           heading
+          id
           childContentfulSectionDescriptionTextNode {
             description
           }
-          id
+          childContentfulSectionBodyTextNode {
+            body
+          }
         }
       }
     }
@@ -43,7 +46,7 @@ export const Introduction = () => {
 
   return (
     <section className={styles.container} id='introduction'>
-      <SectionTitle content={content} />
+      <SectionTitle sectionContent={content} />
       <div className={styles.videoContainer}>
         <video
           autoPlay
