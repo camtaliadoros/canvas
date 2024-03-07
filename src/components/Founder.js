@@ -1,7 +1,27 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
+import { SectionTitle } from './SectionTitle';
+import { graphql, useStaticQuery } from 'gatsby';
 
 export const Founder = () => {
+  const data = useStaticQuery(graphql`
+    query IntroductionContent {
+      allContentfulSection(filter: { name: { eq: "FOUNDER" } }) {
+        nodes {
+          title
+          name
+          heading
+          childContentfulSectionDescriptionTextNode {
+            description
+          }
+          id
+        }
+      }
+    }
+  `);
+
+  const content = data.allContentfulSection.nodes[0];
+
   return (
     <section className='white-container-section' id='founder'>
       <StaticImage
@@ -12,26 +32,7 @@ export const Founder = () => {
         width={120}
         className='founder-img'
       />
-      <h1>FOUNDER</h1>
-      <h2>Meet Alex</h2>
-      <p>
-        Alex has extensive experience in leadership across the philanthropic
-        sector, with an expertise and passion for philanthropic and social
-        impact strategy and charitable establishment and direction.
-      </p>
-      <p>
-        Alex's career spans across the UK, Uganda, Burma, Armenia, New York and
-        South Africa - but London is home, where she lives with her family and
-        Frenchie - balancing the privilege of directing Canvas with the absolute
-        joy of being a Mum to her son.
-      </p>
-      <p>
-        “It's been my honour to support philanthropists of diverse backgrounds
-        and passions, realise the impact and change they wish to see in an ever
-        changing world. As we see the landscape of need increase regarding
-        almost every cause and issue across the globe, it's a privilege to be
-        able to support those who are able, make a difference to those in need”
-      </p>
+      <SectionTitle content={content} />
       <StaticImage
         src='../assets/alex-signature.png'
         alt='alex signature'
