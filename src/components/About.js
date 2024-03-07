@@ -28,7 +28,7 @@ const sortedLogos = [
 
 export const About = () => {
   const data = useStaticQuery(graphql`
-    query ClientLogos {
+    query AboutContent {
       allFile(filter: { relativeDirectory: { eq: "client-logos" } }) {
         nodes {
           id
@@ -39,6 +39,17 @@ export const About = () => {
           relativePath
         }
       }
+      allContentfulSection(filter: { name: { eq: "About" } }) {
+        nodes {
+          title
+          name
+          heading
+          childContentfulSectionDescriptionTextNode {
+            description
+          }
+          id
+        }
+      }
     }
   `);
 
@@ -47,25 +58,15 @@ export const About = () => {
     (a, b) => sortedLogos.indexOf(a.name) - sortedLogos.indexOf(b.name)
   );
 
+  const content = data.allContentfulSection.nodes[0];
+
   return (
     <section className='white-container-section' id='about'>
-      <h1 className='dark'>About</h1>
-      <h2 className='dark'>A Space to Care</h2>
-      <h4 className='dark'>
-        We have the privilege of working with clients of all shapes and sizes,
-        yet all united in their purpose to enhance the world we live in.
-      </h4>
+      <h1 className='dark'>{content.name}</h1>
+      <h2 className='dark'>{content.title}</h2>
+      <h4 className='dark'>{content.heading}</h4>
       <p className='dark'>
-        Canvas was founded in 2015 by Alexandra Taliadoros following a career
-        leading charitable and philanthropic efforts for individuals, families,
-        and businesses across both international and domestic landscapes.
-      </p>
-      <p className='dark'>
-        Through a menu of services, from charity establishment to foundation
-        management; consulting on corporate social responsibility to governance
-        and compliance controls (and everything in between), we support those
-        who wish to make a difference, create meaningful and powerful change in
-        the world.
+        {content.childContentfulSectionDescriptionTextNode.description}
       </p>
       <div className={styles.logosContainer}>
         {logos.map((logo, i) => (
