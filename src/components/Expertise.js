@@ -2,6 +2,7 @@ import React from 'react';
 import { ExpertiseCard } from './ExpertiseCard';
 import { graphql, useStaticQuery } from 'gatsby';
 import * as styles from '../styles/expertise.module.scss';
+import { SectionTitle } from './SectionTitle';
 
 export const Expertise = () => {
   const data = useStaticQuery(graphql`
@@ -25,25 +26,32 @@ export const Expertise = () => {
           id
         }
       }
+
+      allContentfulSection(filter: { name: { eq: "EXPERTISE" } }) {
+        nodes {
+          title
+          name
+          heading
+          childContentfulSectionDescriptionTextNode {
+            description
+          }
+          id
+          childContentfulSectionTextTextNode {
+            text
+          }
+        }
+      }
     }
   `);
 
-  const expertiseContent = data.allMarkdownRemark.nodes;
+  const expertiseCardsContent = data.allMarkdownRemark.nodes;
+  const content = data.allContentfulSection.nodes[0];
 
   return (
     <section id='expertise'>
-      <h1>EXPERTISE</h1>
-      <h2>A Space to Grow</h2>
-      <div className='section-description'>
-        <p className='large'>
-          Our principal offering is through the management of philanthropic and
-          socially responsible initiatives. However, we offer a menu of services
-          for our partners who have particular requirements in their non-profit
-          operations
-        </p>
-      </div>
+      <SectionTitle content={content} />
       <div className={styles.expertiseCardsContainer}>
-        {expertiseContent.map((content) => {
+        {expertiseCardsContent.map((content) => {
           return <ExpertiseCard content={content} key={content.id} />;
         })}
       </div>

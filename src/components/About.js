@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { ClientLogos } from './ClientLogos';
 import * as styles from '../styles/about.module.scss';
+import { SectionTitle } from './SectionTitle';
 
 const sortedLogos = [
   'housing-justice',
@@ -39,7 +40,7 @@ export const About = () => {
           relativePath
         }
       }
-      allContentfulSection(filter: { name: { eq: "About" } }) {
+      allContentfulSection(filter: { name: { eq: "ABOUT" } }) {
         nodes {
           title
           name
@@ -48,6 +49,9 @@ export const About = () => {
             description
           }
           id
+          childContentfulSectionTextTextNode {
+            text
+          }
         }
       }
     }
@@ -62,12 +66,8 @@ export const About = () => {
 
   return (
     <section className='white-container-section' id='about'>
-      <h1 className='dark'>{content.name}</h1>
-      <h2 className='dark'>{content.title}</h2>
-      <h4 className='dark'>{content.heading}</h4>
-      <p className='dark'>
-        {content.childContentfulSectionDescriptionTextNode.description}
-      </p>
+      <SectionTitle content={content} />
+
       <div className={styles.logosContainer}>
         {logos.map((logo, i) => (
           <ClientLogos path={logo} key={i} />

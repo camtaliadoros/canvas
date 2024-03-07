@@ -4,13 +4,14 @@ import SphereMp4 from '../assets/sphere.mp4';
 import * as styles from '../styles/introduction.module.scss';
 import { Testimonials } from './Testimonials';
 import { graphql, useStaticQuery } from 'gatsby';
+import { SectionTitle } from './SectionTitle';
 
 export const Introduction = () => {
   const [videoSrc, setVideoSrc] = useState();
 
   const data = useStaticQuery(graphql`
     query IntroductionContent {
-      allContentfulSection(filter: { name: { eq: "Introduction" } }) {
+      allContentfulSection(filter: { name: { eq: "INTRODUCTION" } }) {
         nodes {
           title
           name
@@ -42,13 +43,7 @@ export const Introduction = () => {
 
   return (
     <section className={styles.container} id='introduction'>
-      <h1>{content.name}</h1>
-      <h2>{content.title}</h2>
-      <div className='section-description'>
-        <p className='large'>
-          {content.childContentfulSectionDescriptionTextNode.description}
-        </p>
-      </div>
+      <SectionTitle content={content} />
       <div className={styles.videoContainer}>
         <video
           autoPlay
