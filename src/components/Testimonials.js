@@ -29,15 +29,27 @@ export const Testimonials = () => {
   const groups = allTestimonials.map((testimonial) => testimonial.group).sort();
   const numOfGroups = new Set(groups).size;
 
-  const [featuredGroup, setFeaturedGroup] = useState();
+  const [featuredTestimonials, setFeaturedTestimonials] = useState([]);
 
   useEffect(() => {
-    setFeaturedGroup(Math.floor(Math.random() * numOfGroups) + 1);
-  }, []);
+    const selectTestimonials = () => {
+      const featuredGroup = Math.floor(Math.random() * numOfGroups) + 1;
 
-  const featuredTestimonials = allTestimonials.filter(
-    (testimonial) => testimonial.group === featuredGroup
-  );
+      const testimonials = allTestimonials.filter(
+        (testimonial) => testimonial.group === featuredGroup
+      );
+
+      return testimonials;
+    };
+
+    let selectedTestimonials;
+
+    do {
+      selectedTestimonials = selectTestimonials();
+    } while (selectedTestimonials.length < 3);
+
+    setFeaturedTestimonials(selectedTestimonials);
+  }, []);
 
   return (
     <div className={styles.container}>
