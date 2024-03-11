@@ -48,7 +48,7 @@ export const Testimonials = () => {
       selectedTestimonials = selectTestimonials();
     } while (selectedTestimonials.length < 3);
 
-    setFeaturedTestimonials(selectedTestimonials);
+    setFeaturedTestimonials(selectedTestimonials.slice(0, 3));
   }, []);
 
   return (
