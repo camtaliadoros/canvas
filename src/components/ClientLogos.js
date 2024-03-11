@@ -3,9 +3,10 @@ import React from 'react';
 import * as styles from '../styles/about.module.scss';
 
 export const ClientLogos = ({ path }) => {
-  const logo = getImage(path);
+  const logoPath = path.logo;
+  const logo = getImage(logoPath.gatsbyImageData);
 
-  const name = path.name;
+  const name = path.logo.title;
 
   return (
     <GatsbyImage

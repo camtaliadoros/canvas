@@ -1,46 +1,72 @@
-import { StaticImage } from 'gatsby-plugin-image';
+import { graphql, useStaticQuery } from 'gatsby';
+import { GatsbyImage, StaticImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
+import { SectionTitle } from './SectionTitle';
 
 export const Founder = () => {
+  const data = useStaticQuery(graphql`
+    query FounderContent {
+      allContentfulSection(filter: { name: { eq: "ABOUT" } }) {
+        nodes {
+          title
+          name
+          heading
+          id
+          childContentfulSectionDescriptionTextNode {
+            description
+          }
+          childContentfulSectionBodyTextNode {
+            body
+          }
+        }
+      }
+      allContentfulFounder {
+        nodes {
+          picture {
+            gatsbyImageData
+            title
+          }
+          signature {
+            gatsbyImageData
+            title
+          }
+          name
+          title
+        }
+      }
+    }
+  `);
+
+  const content = data.allContentfulSection.nodes[0];
+  const founderContent = data.allContentfulFounder.nodes[0];
+
+  const { picture, signature } = founderContent;
+
+  const picturePath = getImage(picture.gatsbyImageData);
+  const signaturePath = getImage(signature.gatsbyImageData);
+
   return (
     <section className='white-container-section' id='founder'>
-      <StaticImage
-        src='../assets/alex.png'
-        loading='lazy'
-        placeholder='blurred'
+      <GatsbyImage
+        image={picturePath}
         alt='canvas founder Alex Taliadoros'
         className='founder-img'
+        placeholder='blurred'
+        loading='lazy'
       />
-      <h1>FOUNDER</h1>
-      <h2>Meet Alex</h2>
-      <p>
-        Alex has extensive experience in leadership across the philanthropic
-        sector, with an expertise and passion for philanthropic and social
-        impact strategy and charitable establishment and direction.
-      </p>
-      <p>
-        Alex's career spans across the UK, Uganda, Burma, Armenia, New York and
-        South Africa - but London is home, where she lives with her family and
-        Frenchie - balancing the privilege of directing Canvas with the absolute
-        joy of being a Mum to her son.
-      </p>
-      <p>
-        “It's been my honour to support philanthropists of diverse backgrounds
-        and passions, realise the impact and change they wish to see in an ever
-        changing world. As we see the landscape of need increase regarding
-        almost every cause and issue across the globe, it's a privilege to be
-        able to support those who are able, make a difference to those in need”
-      </p>
-      <StaticImage
-        src='../assets/alex-signature.png'
+
+      <SectionTitle sectionContent={content} />
+      <GatsbyImage
+        image={signaturePath}
         alt='alex signature'
         loading='lazy'
         placeholder='blurred'
         className='signature'
       />
+
       <div className='signature-container'>
-        <p>Alexandra Taliadoros</p>
-        <p>Founder - Canvas Philanthropy</p>
+        <p>{founderContent.name}</p>
+        <p>{founderContent.title}</p>
       </div>
     </section>
   );

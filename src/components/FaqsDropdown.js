@@ -4,8 +4,8 @@ import * as styles from '../styles/faq.module.scss';
 export const FaqsDropdown = ({ content }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const question = content.frontmatter.question;
-  const answer = content.internal.content;
+  const { question } = content.question;
+  const { answer } = content.answer;
 
   const handleClick = () => {
     setIsOpen((prevState) => !prevState);

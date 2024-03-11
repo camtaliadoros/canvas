@@ -6,37 +6,50 @@ import { TestimonialCard } from './TestimonialCard';
 export const Testimonials = () => {
   const data = useStaticQuery(graphql`
     query Testimonial {
-      allMarkdownRemark(
-        filter: { frontmatter: { type: { eq: "testimonial" } } }
-        sort: { frontmatter: { position: ASC } }
-      ) {
+      allContentfulTestimonial(sort: { position: ASC }) {
         nodes {
-          frontmatter {
-            blurb
-            company
-            group
-            title
-            position
-            logoPath {
-              relativePath
-              publicURL
-            }
+          group
+          position
+          company
+          title
+          testimonial {
+            testimonial
+          }
+          logo {
+            publicUrl
+            url
           }
         }
       }
     }
   `);
 
-  const [groupNumber, setGroupNumber] = useState();
+  const allTestimonials = data.allContentfulTestimonial.nodes;
+
+  const groups = allTestimonials.map((testimonial) => testimonial.group).sort();
+  const numOfGroups = new Set(groups).size;
+
+  const [featuredTestimonials, setFeaturedTestimonials] = useState([]);
 
   useEffect(() => {
-    setGroupNumber(Math.floor(Math.random() * 4) + 1);
-  }, []);
+    const selectTestimonials = () => {
+      const featuredGroup = Math.floor(Math.random() * numOfGroups) + 1;
 
-  const allTestimonials = data.allMarkdownRemark.nodes;
-  const featuredTestimonials = allTestimonials.filter(
-    (testimonial) => testimonial.frontmatter.group === groupNumber
-  );
+      const testimonials = allTestimonials.filter(
+        (testimonial) => testimonial.group === featuredGroup
+      );
+
+      return testimonials;
+    };
+
+    let selectedTestimonials;
+
+    do {
+      selectedTestimonials = selectTestimonials();
+    } while (selectedTestimonials.length < 3);
+
+    setFeaturedTestimonials(selectedTestimonials.slice(0, 3));
+  }, []);
 
   return (
     <div className={styles.container}>

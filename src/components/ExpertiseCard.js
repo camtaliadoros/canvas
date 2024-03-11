@@ -3,9 +3,11 @@ import React from 'react';
 import * as styles from '../styles/expertise.module.scss';
 
 export const ExpertiseCard = ({ content }) => {
-  const { title, description, iconPath, position } = content.frontmatter;
+  const { title, body, icon, position } = content;
 
-  const icon = getImage(iconPath);
+  const description = body.body;
+
+  const iconGatsby = getImage(icon);
 
   return (
     <div className={styles.expertiseCard}>
@@ -14,7 +16,7 @@ export const ExpertiseCard = ({ content }) => {
       </div>
       <h3>{title}</h3>
       <GatsbyImage
-        image={icon}
+        image={iconGatsby}
         alt={title}
         className={styles.expertiseIcon}
         objectFit='contain'

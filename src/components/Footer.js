@@ -4,16 +4,14 @@ import React from 'react';
 
 export const Footer = () => {
   const data = useStaticQuery(graphql`
-    query SiteInfo {
-      site {
-        siteMetadata {
-          copyright
-        }
+    query CopyrightContent {
+      contentfulCopyright {
+        copyright
       }
     }
   `);
 
-  const { copyright } = data.site.siteMetadata;
+  const { copyright } = data.contentfulCopyright;
 
   return (
     <footer>
