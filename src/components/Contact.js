@@ -1,20 +1,31 @@
 import React from 'react';
 import * as styles from '../styles/contact.module.scss';
+import { graphql, useStaticQuery } from 'gatsby';
 
 export const Contact = () => {
+  const data = useStaticQuery(graphql`
+    query ContactContent {
+      contentfulGetInTouch {
+        emailAddress
+        text {
+          text
+        }
+      }
+    }
+  `);
+
+  const { text, emailAddress } = data.contentfulGetInTouch;
+
   return (
     <section className={styles.contactContainer} id='contact'>
-      <h5>
-        Get in touch today to find out how we can assist you with your
-        philanthropic vision.
-      </h5>
+      <h5>{text.text}</h5>
       <a
         className='email'
-        href='mailto:alexandra@canvasphilanthropy.com'
+        href={`mailto:${emailAddress}`}
         target='_blank'
         rel='noreferrer'
       >
-        alexandra@canvasphilanthropy.com
+        {emailAddress}
       </a>
     </section>
   );

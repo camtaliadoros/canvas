@@ -4,40 +4,16 @@ import { ClientLogos } from './ClientLogos';
 import * as styles from '../styles/about.module.scss';
 import { SectionTitle } from './SectionTitle';
 
-const sortedLogos = [
-  'housing-justice',
-  'beattiefoundation',
-  '7stars-foundation-logo',
-  'tons-of-help',
-  'justliving-foundation',
-  'praetura-ventures',
-  'sureserve-group',
-  'c3posttrade',
-  'footprint-foundation',
-  'building-heroes',
-  'cafedirect',
-  'lighthouse-club',
-  'buildinglives',
-  'national-housing',
-  'you-okay-doc',
-  'kingdomchoir',
-  'arete-foundation-logo',
-  'brixton-finishing-school',
-  'tbs',
-  'stefphilips',
-];
-
 export const About = () => {
   const data = useStaticQuery(graphql`
     query AboutContent {
-      allFile(filter: { relativeDirectory: { eq: "client-logos" } }) {
+      allContentfulClientLogos(sort: { position: ASC }) {
         nodes {
-          id
-          name
-          childImageSharp {
+          logo {
             gatsbyImageData
+            title
           }
-          relativePath
+          id
         }
       }
       allContentfulSection(filter: { name: { eq: "ABOUT" } }) {
@@ -57,10 +33,7 @@ export const About = () => {
     }
   `);
 
-  const logos = data.allFile.nodes;
-  logos.sort(
-    (a, b) => sortedLogos.indexOf(a.name) - sortedLogos.indexOf(b.name)
-  );
+  const logos = data.allContentfulClientLogos.nodes;
 
   const content = data.allContentfulSection.nodes[0];
 
@@ -69,8 +42,8 @@ export const About = () => {
       <SectionTitle sectionContent={content} />
 
       <div className={styles.logosContainer}>
-        {logos.map((logo, i) => (
-          <ClientLogos path={logo} key={i} />
+        {logos.map((logo) => (
+          <ClientLogos path={logo} key={logo.id} />
         ))}
       </div>
     </section>
