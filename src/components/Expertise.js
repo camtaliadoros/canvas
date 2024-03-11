@@ -39,7 +39,7 @@ export const Expertise = () => {
   `);
 
   const expertiseCardsContent = data.allContentfulExpertiseCard.nodes;
-  console.log(expertiseCardsContent);
+
   const content = data.allContentfulSection.nodes[0];
 
   return (

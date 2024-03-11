@@ -6,18 +6,15 @@ import { SectionTitle } from './SectionTitle';
 export const Faqs = () => {
   const data = useStaticQuery(graphql`
     query FaqContent {
-      allMarkdownRemark(
-        sort: { frontmatter: { position: ASC } }
-        filter: { frontmatter: { type: { eq: "faq" } } }
-      ) {
+      allContentfulFaq {
         nodes {
-          frontmatter {
-            position
+          question {
             question
           }
-          internal {
-            content
+          answer {
+            answer
           }
+          id
         }
       }
 
@@ -38,14 +35,14 @@ export const Faqs = () => {
     }
   `);
 
-  const faqContent = data.allMarkdownRemark.nodes;
+  const faqContent = data.allContentfulFaq.nodes;
   const content = data.allContentfulSection.nodes[0];
 
   return (
     <section id='faq'>
       <SectionTitle sectionContent={content} />
-      {faqContent.map((content, answerIndex) => (
-        <FaqsDropdown content={content} key={answerIndex} />
+      {faqContent.map((content) => (
+        <FaqsDropdown content={content} key={content.id} />
       ))}
     </section>
   );
