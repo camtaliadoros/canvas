@@ -7,21 +7,16 @@ import { SectionTitle } from './SectionTitle';
 export const Expertise = () => {
   const data = useStaticQuery(graphql`
     query ExpertiseContent {
-      allMarkdownRemark(
-        filter: { frontmatter: { type: { eq: "expertise" } } }
-        sort: { frontmatter: { position: ASC } }
-      ) {
+      allContentfulExpertiseCard(sort: { position: ASC }) {
         nodes {
-          frontmatter {
-            description
-            title
-            position
-            iconPath {
-              id
-              childImageSharp {
-                gatsbyImageData
-              }
-            }
+          position
+          title
+          icon {
+            id
+            gatsbyImageData
+          }
+          body {
+            body
           }
           id
         }
@@ -43,7 +38,8 @@ export const Expertise = () => {
     }
   `);
 
-  const expertiseCardsContent = data.allMarkdownRemark.nodes;
+  const expertiseCardsContent = data.allContentfulExpertiseCard.nodes;
+  console.log(expertiseCardsContent);
   const content = data.allContentfulSection.nodes[0];
 
   return (
