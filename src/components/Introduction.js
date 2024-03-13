@@ -11,7 +11,9 @@ export const Introduction = () => {
 
   const data = useStaticQuery(graphql`
     query IntroductionContent {
-      allContentfulSection(filter: { name: { eq: "INTRODUCTION" } }) {
+      allContentfulSection(
+        filter: { id: { eq: "0793415f-fe9d-5f00-a047-027426664f84" } }
+      ) {
         nodes {
           title
           name

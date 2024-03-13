@@ -139,7 +139,7 @@ export const Nav = () => {
         <button
           onClick={handleMenuClick}
           className={`${styles.navIcon} ${menuIsOpen ? styles.open : ''}`}
-          title={null}
+          title={''}
         >
           <span></span>
           <span></span>

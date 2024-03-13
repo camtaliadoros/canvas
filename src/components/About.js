@@ -16,7 +16,9 @@ export const About = () => {
           id
         }
       }
-      allContentfulSection(filter: { name: { eq: "ABOUT" } }) {
+      allContentfulSection(
+        filter: { id: { eq: "e4605f50-1233-5cb7-acab-2174014b6449" } }
+      ) {
         nodes {
           title
           name

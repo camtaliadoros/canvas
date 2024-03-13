@@ -18,7 +18,9 @@ export const Faqs = () => {
         }
       }
 
-      allContentfulSection(filter: { name: { eq: "FAQ" } }) {
+      allContentfulSection(
+        filter: { id: { eq: "2db23c0a-c021-5688-8239-ddd63a3b3914" } }
+      ) {
         nodes {
           title
           name
@@ -37,6 +39,8 @@ export const Faqs = () => {
 
   const faqContent = data.allContentfulFaq.nodes;
   const content = data.allContentfulSection.nodes[0];
+
+  console.log(content);
 
   return (
     <section id='faq'>

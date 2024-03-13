@@ -1,12 +1,14 @@
 import { graphql, useStaticQuery } from 'gatsby';
-import { GatsbyImage, StaticImage, getImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { SectionTitle } from './SectionTitle';
 
 export const Founder = () => {
   const data = useStaticQuery(graphql`
     query FounderContent {
-      allContentfulSection(filter: { name: { eq: "ABOUT" } }) {
+      allContentfulSection(
+        filter: { id: { eq: "4455f3dc-d9f1-5bec-854d-d7f1c6449cd1" } }
+      ) {
         nodes {
           title
           name

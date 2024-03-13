@@ -21,7 +21,9 @@ export const Expertise = () => {
           id
         }
       }
-      allContentfulSection(filter: { name: { eq: "EXPERTISE" } }) {
+      allContentfulSection(
+        filter: { id: { eq: "2a385fd7-8f39-59f1-ba52-bd755b1f0b92" } }
+      ) {
         nodes {
           title
           name
