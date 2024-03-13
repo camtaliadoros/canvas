@@ -139,7 +139,7 @@ export const Nav = () => {
         <button
           onClick={handleMenuClick}
           className={`${styles.navIcon} ${menuIsOpen ? styles.open : ''}`}
-          title={''}
+          aria-label={'menu icon'}
         >
           <span></span>
           <span></span>

@@ -40,8 +40,6 @@ export const Faqs = () => {
   const faqContent = data.allContentfulFaq.nodes;
   const content = data.allContentfulSection.nodes[0];
 
-  console.log(content);
-
   return (
     <section id='faq'>
       <SectionTitle sectionContent={content} />
